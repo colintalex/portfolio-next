@@ -14,3 +14,7 @@
 .title {
   float:left;
 }
+
+.avatar {
+  border-radius: 100%;
+}
