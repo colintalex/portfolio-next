@@ -14,3 +14,24 @@ a {
 * {
   box-sizing: border-box;
 }
+
+
+#ruby {
+  background-color: red !important;
+}
+#js {
+  background-color: gold !important;
+}
+#html {
+  background-color: yellowgreen !important;
+}
+#css {
+  background-color: orange !important;
+}
+
+.badge {
+  transition: all 0.2s;
+}
+.badge:hover {
+  transform: scale(1.05);
+}

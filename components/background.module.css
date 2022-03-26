@@ -1,0 +1,18 @@
+.topo path:nth-of-type(1) {
+  stroke-dasharray: 800;
+  animation: dash 60s infinite linear;
+  stroke-linecap: round;
+  stroke-width: 0.1px;
+}
+
+.topo {
+  background-color: black;
+}
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 25;
+  }
+  100% {
+    stroke-dashoffset: 200;
+  }
+}
