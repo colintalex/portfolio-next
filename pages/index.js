@@ -1,8 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import Document from 'next/document';
-import { useEffect } from 'react';
 import PageChunk from '../components/page_chunk';
 import Nav from '../components/nav';
 import AboutMe from '../components/about/about_me';
