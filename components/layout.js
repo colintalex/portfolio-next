@@ -5,13 +5,13 @@ import Nav from "./nav";
 // import Footer from "./footer";
 
 export default function Layout({ children }) {
-  return(
+  return (
     <>
       {/* <Nav /> */}
-        <main>
-          {children}
-        </main>
+      <main data-spy="scroll" data-target="#nav_menu" data-offset="50">
+        {children}
+      </main>
       {/* <Footer /> */}
     </>
-  )
+  );
 } 

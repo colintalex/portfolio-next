@@ -7,6 +7,12 @@
   position: sticky;
   top: 0px;
   gap: 6rem;
+  z-index: 1000;
+  height: 50px;
+  align-items: center;
+  width: 75%;
+  background-color: black;
+  justify-content: center;
 }
 
 .nav_item {
@@ -17,14 +23,19 @@
   height: 100px;
 }
 
-.nav_item a{
 
-}
 
 .round_nav {
+  color: gray;
   flex: auto;
-  background-color: wheat;
-  height: 60px;
-  width: 60px;
-  max-width: 60px;
+  height: auto;
+  width: auto;
+  max-width: min-content;
+  transition: all 0.4s;
+  font-size: 18px;
+  white-space: nowrap;
+}
+
+.round_nav:hover {
+  color: turquoise;
 }

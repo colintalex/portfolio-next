@@ -5,8 +5,10 @@ import Document from 'next/document';
 import { useEffect } from 'react';
 import PageChunk from '../components/page_chunk';
 import Nav from '../components/nav';
-import AboutMe from '../components/about_me';
-import Experience from '../components/experience';
+import AboutMe from '../components/about/about_me';
+import Experience from "../components/experience/experience";
+import Card from '../components/card';
+import Education from "../components/education/education";
 
 export default function Home() {
   const skills = [["Ruby/Rails", "ruby"], ["Javascript", "js"], ["HTML", "html"], ["CSS", "css"]]
@@ -19,29 +21,42 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <PageChunk flex='true'>
+        <PageChunk>
           <div>
             <Image src="/cloud.svg" alt="Cloud Logo" width={640} height={360} />
           </div>
 
           <h1 className={styles.name}>colin alexander</h1>
-          <h4 className={styles.job_title}>fullstack engineer <span>/</span> devOps</h4>
+          <h4 className={styles.job_title}>
+            fullstack engineer <span>/</span> devOps
+          </h4>
           <h5 className={styles.sub_name}>forever curious, always learning</h5>
 
           <div className={styles.name}>
             <ul className={styles.short_skills}>
               {skills.map((skill) => (
                 <li key={skill[1]}>
-                  <span id={skill[1]} className="badge bg-secondary">{skill[0]}</span>
+                  <span id={skill[1]} className="badge bg-secondary">
+                    {skill[0]}
+                  </span>
                 </li>
               ))}
             </ul>
           </div>
         </PageChunk>
-        <Nav/>
+        <Nav />
         <PageChunk>
-          <AboutMe/>
-          <Experience/>
+          <div className={styles.avatar_wrapper}>
+            <Image
+              src="/colin_selfie.jpg"
+              width="300"
+              height="300"
+              className={styles.avatar}
+            />
+          </div>
+          <AboutMe />
+          <Experience />
+          <Education />
         </PageChunk>
       </main>
     </div>

@@ -35,3 +35,6 @@ a {
 .badge:hover {
   transform: scale(1.05);
 }
+.p_content {
+  text-align: left;
+}
