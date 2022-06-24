@@ -1,8 +1,58 @@
 .about_main {
   margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .title {
   position: absolute;
 }
 
+.short_langs {
+  display: flex;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  justify-content: center;
+}
+
+.donut {
+  /* (A1) CIRCLE */
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* (A2) SEGMENTS */
+  /* background: conic-gradient(rgb(224, 224, 224) 0deg 360deg); */
+}
+
+.donut_fill {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(0px 0px 4px black);
+}
+
+.donut_hole {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #272727;
+  color: whitesmoke;
+  font-size: 10px;
+  padding: 3px;
+}
+
+
+.short_langs li {
+  display: inline;
+}
+
+.short_langs span {
+  color: black;
+}
