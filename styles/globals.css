@@ -16,7 +16,7 @@ a {
 }
 
 
-#ruby {
+/* #ruby {
   background-color: red !important;
 }
 #js {
@@ -28,6 +28,15 @@ a {
 #css {
   background-color: orange !important;
 }
+#gsvr {
+  background-color: green !important;
+}
+#agis {
+  background-color: #00aaff !important;
+}
+#qgis {
+  background-color: yellow !important;
+} */
 
 .badge {
   transition: all 0.2s;

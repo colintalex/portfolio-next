@@ -18,7 +18,7 @@
 
 .donut {
   /* (A1) CIRCLE */
-  height: 30px;
+  height: 40px;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -29,8 +29,8 @@
 }
 
 .donut_fill {
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -39,15 +39,24 @@
 }
 
 .donut_hole {
-  width: 22px;
-  height: 22px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
   background: #272727;
   color: whitesmoke;
-  font-size: 10px;
+  font-size: 16px;
   padding: 3px;
 }
 
+@keyframes example {
+  from {
+    background-color: red;
+  }
+
+  to {
+    background-color: yellow;
+  }
+}
 
 .short_langs li {
   display: inline;

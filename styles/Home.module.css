@@ -148,22 +148,6 @@
   color: gray !important;
 }
 
-.short_skills {
-  display: flex;
-  gap: 15px;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-}
-
-.short_skills li {
-  display: inline;
-}
-
-.short_skills span {
-  color: black;
-}
-
 .container {
   padding: 0 2rem;
   animation: hideshow 10s ease infinite;
