@@ -1,8 +1,45 @@
 .main {
   margin-top: 60px;
   list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: antiquewhite;
+  padding: 10px 15px;
+  border-radius: 4px;
 }
 
 .title {
   position: absolute;
+}
+
+.experience_org {
+  text-align: right;
+  display: inline;
+}
+
+.experience_role {
+  text-align: left;
+  display: inline-block;
+}
+
+.divider {
+  grid-column: span 2;
+}
+
+.divider hr{
+  margin: 0;
+  border: 1.5px solid gray;
+  opacity: 1;
+  border-radius: 4px;
+}
+
+.info_chunk {
+  text-align: left;
+  border: 1px solid lightgray;
+  margin: 10px;
+  filter: drop-shadow(1px 1px 1px black);
+  background: whitesmoke;
+  padding-top: 8px;
+  border-radius: 4px;
+  /* padding-top: 5px; */
 }
