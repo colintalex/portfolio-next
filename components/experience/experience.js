@@ -10,9 +10,26 @@ export default function Experience(param) {
         <ul>
           <li>
             <h4 className="p_content">Sanborn</h4>
-            <h5 className="p_content">Software Engineer</h5>
+            <p>
+              Company
+              description
+              location
+              social icons
+            </p>
+            <h5 className="p_content">Software Engineer I</h5>
             <ul>
-              <h6 className="p_content">
+              <li className="p_content"></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </Card>
+  );
+}
+
+
+              {
+                /* <h6 className="p_content">
                 Ruby on Rails
                 <ul>
                   <li>Focus on client-facing apps, developed primarily for viewing and analyzing 2D/3D spatial data.</li>
@@ -36,12 +53,5 @@ export default function Experience(param) {
                 <ul>
                   <li>NginX configuration/modifications for Linux VM's (Server blocks, local network media mounts)</li>
                 </ul>
-              </h6>
-              <li className="p_content"></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </Card>
-  );
-}
+              </h6> */
+              }

@@ -27,7 +27,7 @@ export default function Home() {
           </div>
 
           <h1 className={styles.name}>colin alexander</h1>
-          <h4 className={styles.job_title}>- fullstack engineer -</h4>
+          <h4 className={styles.job_title}>- fullstack software engineer -</h4>
           <h5 className={styles.sub_name}>forever curious, always learning</h5>
 
           <div className={styles.name}>
