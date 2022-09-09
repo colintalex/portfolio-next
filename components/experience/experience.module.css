@@ -35,11 +35,17 @@
 
 .info_chunk {
   text-align: left;
-  border: 1px solid lightgray;
-  margin: 10px;
-  filter: drop-shadow(1px 1px 1px black);
-  background: whitesmoke;
+  margin: 0 10px;
   padding-top: 8px;
   border-radius: 4px;
+  grid-column: span 2;
   /* padding-top: 5px; */
+}
+
+.info_chunk ul {
+  margin-left: 10px;
+}
+
+.info_chunk h5 {
+  margin-left: 5px;
 }

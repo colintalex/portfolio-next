@@ -19,6 +19,7 @@ export default function Skills (param) {
         ["Windows", "pc", 70],
         ["Linux/Ubuntu", "lnx", 60],
       ];
+
   return (
     <div>
       <div style={{ width: "60%", margin: "auto" }}>
@@ -46,7 +47,7 @@ export default function Skills (param) {
         <br />
         <ul className={styles.short_langs}>
           {opsystems.map((opsystem, i) => (
-            <div className="container">
+            <div className="container" key={opsystem[0]}>
               <strong>{opsystem[0]}</strong>
               <div className={styles.donut} id={opsystem[1]}>
                 <div
