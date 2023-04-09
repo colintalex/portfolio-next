@@ -1,6 +1,6 @@
 import React from 'react';
 import Background from './background';
-import styles from './layout.module.css'
+import styles from './layout.module.scss'
 import Nav from "./nav";
 // import Footer from "./footer";
 

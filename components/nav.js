@@ -1,4 +1,4 @@
-import styles from "./nav.module.css";
+import styles from "./nav.module.scss";
 import Link from "next/link";
 import { Button } from "react-bootstrap";
 import { Offcanvas } from "react-bootstrap";

@@ -1,6 +1,6 @@
 import React from "react";
 import Card from "../card";
-import styles from "./education.module.css";
+import styles from "./education.module.scss";
 
 export default function Education(param) {
   return (

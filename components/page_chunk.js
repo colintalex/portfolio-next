@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./page_chunk.module.css";
+import styles from "./page_chunk.module.scss";
 
 export default function PageChunk({ children }) {
   return (

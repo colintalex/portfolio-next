@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import styles from './about_me.module.css'
+import styles from './about_me.module.scss'
 import Card from "../card";
 
 export default function AboutMe (param) {

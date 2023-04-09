@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./background.module.css";
+import styles from "./background.module.scss";
 import Nav from "./nav";
 // import Footer from "./footer";
 

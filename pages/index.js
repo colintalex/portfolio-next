@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import styles from '../styles/Home.module.scss'
 import PageChunk from '../components/page_chunk';
 import Nav from '../components/nav';
 import AboutMe from '../components/about/about_me';

@@ -1,12 +1,12 @@
 import Image from "next/image";
 import React from "react";
-import styles from './about/about_me.module.css'
+import styles from './about/about_me.module.scss'
 
 export default function Skills (param) {
   const langs = [
-        ["Ruby/Rails", "ruby", 100],
-        ["HTML", "html", 100],
-        ["SCSS/CSS", "css", 95],
+        ["Ruby/Rails", "ruby", 95],
+        ["HTML", "html", 95],
+        ["SCSS/CSS", "css", 90],
         ["Javascript", "js", 85],
         ["PostgreSQL", "ruby", 75],
         ["XML", "ruby", 75],

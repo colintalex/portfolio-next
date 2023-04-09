@@ -1,16 +1,20 @@
 .main {
-  margin-top: 60px;
   list-style: none;
-  display: grid;
   grid-template-columns: 1fr 1fr;
-  background-color: antiquewhite;
+  background-color: #f0f0f0;
   padding: 10px 15px;
   border-radius: 4px;
 }
 
-.title {
-  position: absolute;
+.experience_header{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
+.experience_title {
+  /* position: absolute; */
+  color:darkturquoise
+}
+
 
 .experience_org {
   text-align: right;

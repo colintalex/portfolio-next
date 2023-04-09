@@ -1,6 +1,6 @@
 import React from "react";
 import Card from "../card";
-import styles from "./experience.module.css";
+import styles from "./experience.module.scss";
 
 export default function Experience(param) {
   const accomplishments = [
@@ -35,13 +35,15 @@ export default function Experience(param) {
 
   return (
     <Card>
-      <h2 className={styles.title}>Professional Experience</h2>
       <div className={styles.main}>
-        <div className={styles.experience_role}>
-          <h3>Software Engineer I</h3>
-        </div>
-        <div className={styles.experience_org}>
-          <h4>Sanborn</h4>
+        <div className={styles.experience_title}></div>
+        <div className={styles.experience_header}>
+          <div className={styles.experience_role}>
+            <h3>Software Engineer I</h3>
+          </div>
+          <div className={styles.experience_org}>
+            <h4>Sanborn</h4>
+          </div>
         </div>
         <div className={styles.divider}>
           <hr></hr>
