@@ -1,16 +1,106 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.scss'
-import PageChunk from '../components/page_chunk';
-import Nav from '../components/nav';
-import AboutMe from '../components/about/about_me';
+import Head from "next/head";
+import Image from "next/image";
+import styles from "../styles/Home.module.scss";
+import PageChunk from "../components/page_chunk";
+import Nav from "../components/nav";
+import AboutMe from "../components/about/about_me";
 import Experience from "../components/experience/experience";
-import Card from '../components/card';
+import Card from "../components/card";
 import Education from "../components/education/education";
-import Skills from '../components/skills';
+import Skills from "../components/skills";
+import Isomer from "isomer/js/isomer";
+import { useEffect } from "react";
 
 export default function Home() {
+  useEffect(() => {
+    // browser code
+    var canvas = document.getElementById("box_canvas");
+    var iso = new Isomer(canvas);
+    iso.canvasOrigin = new Isomer.Point(canvas.width / 2, canvas.height / 2);
 
+    // Define the size and color of the blocks
+    var blockWidth = 0.75;
+    var blockDepth = 0.75;
+    var blockHeight = 0.75;
+
+    var randomNumber = Math.floor(Math.random() * 256);
+    var currentColor = new Isomer.Color(222, 24, 244, 0.1);
+    // var randomNumber = 21;
+    let colorIncrement1 = -0.1;
+    let colorIncrement2 = -0.2;
+    let colorIncrement3 = 0.2;
+
+    function animateStack() {
+      if (randomNumber < 250) {
+        randomNumber++;
+      } else {
+        randomNumber--;
+      }
+      var whiteColor = new Isomer.Color(255, randomNumber, randomNumber, 0.5);
+      var blockInner = new Isomer.Shape.Prism(
+        Isomer.Point(0, 0, 1.5),
+        1.5,
+        1.5,
+        1.5
+      );
+      iso.add(blockInner, whiteColor);
+
+      for (var x = 0; x < 3; x++) {
+        for (var y = 0; y < 3; y++) {
+          for (var z = 3; z > 0; z--) {
+            var blockPosition = new Isomer.Point(
+              x * blockWidth,
+              y * blockDepth,
+              z * blockHeight
+            );
+            var block = new Isomer.Shape.Prism(
+              blockPosition,
+              blockWidth,
+              blockDepth,
+              blockHeight
+            );
+            iso.add(block, currentColor);
+            currentColor.r += colorIncrement1 * Math.random() * 1.2;
+            currentColor.g += colorIncrement2 * Math.random() * 1.4;
+            currentColor.b += colorIncrement3 * Math.random() * 1.3;
+            if (currentColor.r >= 250 || currentColor.r <= 5)
+              colorIncrement1 = -colorIncrement1;
+            if (currentColor.g >= 250 || currentColor.g <= 5)
+              colorIncrement2 = -colorIncrement2;
+            if (currentColor.b >= 250 || currentColor.b <= 5)
+              colorIncrement3 = -colorIncrement3;
+          }
+          currentColor.r += colorIncrement1;
+          currentColor.g += colorIncrement2;
+          currentColor.b += colorIncrement3;
+          if (currentColor.r >= 250 || currentColor.r <= 5)
+            colorIncrement1 = -colorIncrement1;
+          if (currentColor.g >= 250 || currentColor.g <= 5)
+            colorIncrement2 = -colorIncrement2;
+          if (currentColor.b >= 250 || currentColor.b <= 5)
+            colorIncrement3 = -colorIncrement3;
+        }
+        currentColor.r += colorIncrement1;
+        currentColor.g += colorIncrement2;
+        currentColor.b += colorIncrement3;
+        if (currentColor.r >= 250 || currentColor.r <= 5)
+          colorIncrement1 = -colorIncrement1;
+        if (currentColor.g >= 250 || currentColor.g <= 5)
+          colorIncrement2 = -colorIncrement2;
+        if (currentColor.b >= 250 || currentColor.b <= 5)
+          colorIncrement3 = -colorIncrement3;
+      }
+      // Wait for 500ms before animating the next block
+      setTimeout(function () {
+        // Clear the canvas to remove the current block
+        iso.canvas.clear();
+        // Animate the next block
+        animateStack();
+      }, 40);
+    }
+
+    animateStack(1);
+  }, []);
 
   return (
     <div className={styles.container}>
@@ -22,9 +112,43 @@ export default function Home() {
 
       <main className={styles.main}>
         <PageChunk>
-          <div>
-            <Image src="/cloud.svg" alt="Cloud Logo" width={640} height={360} />
+          <div className={styles.canvas_container}>
+            <canvas id="box_canvas" height="420" width="420"></canvas>
+            {/* <canvas id="pyramid_canvas" height="600" width="600"></canvas> */}
           </div>
+          {/* <input
+            type="range"
+            min={0}
+            max={1}
+            step={0.02}
+            value={.5}
+            onChange={(event) => {
+              setVolume(event.target.valueAsNumber);
+            }}
+          />
+          <input
+            type="range"
+            min={0}
+            max={1}
+            step={0.02}
+            value={.5}
+            onChange={(event) => {
+              setVolume(event.target.valueAsNumber);
+            }}
+          />
+          <input
+            type="range"
+            min={0}
+            max={1}
+            step={0.02}
+            value={.5}
+            onChange={(event) => {
+              setVolume(event.target.valueAsNumber);
+            }}
+          /> */}
+          {/* <div>
+            <Image src="/cloud.svg" alt="Cloud Logo" width={640} height={360} />
+          </div> */}
 
           <h1 className={styles.name}>colin alexander</h1>
           <h4 className={styles.job_title}>- fullstack software engineer -</h4>
@@ -32,7 +156,7 @@ export default function Home() {
 
           <div className={styles.name}>
             <hr />
-              <Skills/>
+            <Skills />
             <hr />
           </div>
         </PageChunk>

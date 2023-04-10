@@ -1,3 +1,17 @@
+.canvas_container {
+  position: relative;
+  background-color: #525252;
+  border-radius: 100%;
+  canvas {
+    position: relative;
+    top: 40px;
+  }
+}
+
+#pyramid_canvas {
+  position: relative;
+
+}
 
 .main {
   min-height: 100vh;

@@ -1,24 +1,26 @@
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
 import styles from './about/about_me.module.scss'
-
+import Isomer from "isomer/js/isomer";
 export default function Skills (param) {
-  const langs = [
-        ["Ruby/Rails", "ruby", 95],
-        ["HTML", "html", 95],
-        ["SCSS/CSS", "css", 90],
-        ["Javascript", "js", 85],
-        ["PostgreSQL", "ruby", 75],
-        ["XML", "ruby", 75],
-        ["NGINX", "ruby", 60],
-        ["Java/Maven", "gsvr", 40],
-      ];
   
-      const opsystems = [
-        ["MacOS", "mac", 100],
-        ["Windows", "pc", 70],
-        ["Linux/Ubuntu", "lnx", 60],
-      ];
+  const langs = [
+    ["Ruby/Rails", "ruby", 95],
+    ["HTML", "html", 95],
+    ["SCSS/CSS", "css", 90],
+    ["Javascript", "js", 85],
+    ["PostgreSQL", "ruby", 75],
+    ["XML", "ruby", 75],
+    ["NGINX", "ruby", 60],
+    ["Java/Maven", "gsvr", 40],
+  ];
+
+  const opsystems = [
+    ["MacOS", "mac", 100],
+    ["Windows", "pc", 70],
+    ["Linux/Ubuntu", "lnx", 60],
+  ];
+
 
   return (
     <div>
