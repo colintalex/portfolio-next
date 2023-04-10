@@ -68,9 +68,9 @@ export default function Home() {
               blockHeight
             );
             iso.add(block, currentColor);
-            currentColor.r += colorIncrement1 * Math.random() * 1.2;
-            currentColor.g += colorIncrement2 * Math.random() * 1.4;
-            currentColor.b += colorIncrement3 * Math.random() * 1.3;
+            currentColor.r += colorIncrement1 * Math.random() * 1.1;
+            currentColor.g += colorIncrement2 * Math.random() * 1.2;
+            currentColor.b += colorIncrement3 * Math.random() * 1.1;
             if (currentColor.r >= 250 || currentColor.r <= 5)
               colorIncrement1 = -colorIncrement1;
             if (currentColor.g >= 250 || currentColor.g <= 5)
