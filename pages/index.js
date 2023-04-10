@@ -19,12 +19,12 @@ export default function Home() {
     iso.canvasOrigin = new Isomer.Point(canvas.width / 2, canvas.height / 2);
 
     // Define the size and color of the blocks
-    var blockWidth = 0.75;
-    var blockDepth = 0.75;
-    var blockHeight = 0.75;
+    var blockWidth = 1.1;
+    var blockDepth = 1.1;
+    var blockHeight = 1.1;
 
     var randomNumber = Math.floor(Math.random() * 256);
-    var currentColor = new Isomer.Color(222, 24, 244, 0.1);
+    var currentColor = new Isomer.Color(222, 24, 244, 0.08);
     // var randomNumber = 21;
     let colorIncrement1 = -0.1;
     let colorIncrement2 = -0.2;
@@ -36,14 +36,22 @@ export default function Home() {
       } else {
         randomNumber--;
       }
-      var whiteColor = new Isomer.Color(255, randomNumber, randomNumber, 0.5);
+      var randomColor = new Isomer.Color(255, randomNumber, randomNumber, 0.15);
+      var whiteColor = new Isomer.Color(255, 255, 255, 0.8);
       var blockInner = new Isomer.Shape.Prism(
-        Isomer.Point(0, 0, 1.5),
-        1.5,
-        1.5,
-        1.5
+        Isomer.Point(0, 0, 2.4),
+        2,
+        2,
+        2
       );
-      iso.add(blockInner, whiteColor);
+      iso.add(blockInner, randomColor);
+      var smallBlockInner5 = new Isomer.Shape.Prism(
+        Isomer.Point(0, 0, 3.4),
+        1,
+        1,
+        1
+      );
+      iso.add(smallBlockInner5, whiteColor);
 
       for (var x = 0; x < 3; x++) {
         for (var y = 0; y < 3; y++) {
@@ -113,7 +121,7 @@ export default function Home() {
       <main className={styles.main}>
         <PageChunk>
           <div className={styles.canvas_container}>
-            <canvas id="box_canvas" height="420" width="420"></canvas>
+            <canvas id="box_canvas" height="600" width="600"></canvas>
             {/* <canvas id="pyramid_canvas" height="600" width="600"></canvas> */}
           </div>
           {/* <input
