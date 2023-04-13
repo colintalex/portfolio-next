@@ -29,11 +29,11 @@ export default function Home() {
   
     var randomNumber = Math.floor(Math.random() * 256);
     var currentColor = new Isomer.Color(50, 160, 244, 0.5);
-    let colorIncrement1 = 0.01;
-    let colorIncrement2 = 0.01;
-    let colorIncrement3 = 0.01;
+    let colorIncrement1 = 0.013;
+    let colorIncrement2 = 0.014;
+    let colorIncrement3 = 0.015;
     var angle = 0.0;
-    var angleIncrement = 0.006;
+    var angleIncrement = 0.009;
     let isoObjects = [];
     
     function animateStack() {
@@ -115,7 +115,7 @@ export default function Home() {
         1,
         1
       );
-      blackColor.a = 0.9 - (currentColor.r / 255);
+      blackColor.a = 0.9 - (Math.abs(currentColor.r - currentColor.g) / 255);
       blackColor.r = currentColor.r;
       blackColor.g = currentColor.r;
       blackColor.b = currentColor.r;
