@@ -46,7 +46,13 @@ export default function Home() {
       for (var x = 0; x < 3; x++) {
         for (var y = 0; y < 3; y++) {
           for (var z = 3; z > 0; z--) {
-            if (z >= 2 && x <= 1 && y <= 1) continue;
+            // if (z >= 2 && x == 2 && y == 2) continue;
+            if (z >= 2 && x == 1 && y == 2 ) continue;
+            if (z >= 2 && x == 2 && y == 1 ) continue;
+            if (z == 2 && x == 0 && y == 2 ) continue;
+            if (z == 2 && x == 2 && y == 0 ) continue;
+            if (z == 1 && x == 1 && y == 0 ) continue;
+            if (z == 1 && x == 0 && y == 1 ) continue;
             var blockPosition = new Isomer.Point(
               x * blockWidth,
               y * blockDepth,
@@ -109,7 +115,7 @@ export default function Home() {
         1,
         1
       );
-      blackColor.a = 1.1 - (currentColor.r / 255);
+      blackColor.a = 0.9 - (currentColor.r / 255);
       blackColor.r = currentColor.r;
       blackColor.g = currentColor.r;
       blackColor.b = currentColor.r;
