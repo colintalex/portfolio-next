@@ -28,8 +28,8 @@ export default function Home() {
     var blockHeight = 1.1;
 
     iso.setLightPosition(
-        1,
-        3,
+        2,
+        5,
         3
     );
   
