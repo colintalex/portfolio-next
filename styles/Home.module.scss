@@ -1,4 +1,10 @@
-
+@font-face {
+  font-family: 'Tilt Warp';
+  src: url('./TiltWarp-Regular.ttf');
+  font-style: medium;
+  font-weight: normal;
+  font-display: swap;
+}
 
 @mixin animate($animation, $duration, $delay, $method, $times) {
   animation: $animation $duration $delay $method $times;
