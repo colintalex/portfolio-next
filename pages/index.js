@@ -65,6 +65,14 @@ export default function Home() {
               blockDepth,
               blockHeight
             );
+            
+              // if (z == 1 && x == 2 && y == 0){
+              //   block = block.rotateZ(
+              //     blockPosition,
+              //     angle
+              //   );
+              // }
+
             currentColor.a = 0.2;
             iso.add(block, currentColor);
             isoObjects.push(block);
