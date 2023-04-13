@@ -26,6 +26,12 @@ export default function Home() {
     var blockWidth = 1.1;
     var blockDepth = 1.1;
     var blockHeight = 1.1;
+
+    iso.setLightPosition(
+        1,
+        3,
+        3
+    );
   
     var randomNumber = Math.floor(Math.random() * 256);
     var currentColor = new Isomer.Color(50, 160, 244, 0.5);
@@ -65,25 +71,15 @@ export default function Home() {
               blockDepth,
               blockHeight
             );
-            
-              // if (z == 1 && x == 2 && y == 0){
-              //   block = block.rotateZ(
-              //     blockPosition,
-              //     angle
-              //   );
-              // }
-
             currentColor.a = 0.2;
+            iso.lightColor.r = 255 - (currentColor.r /2)
+            iso.lightColor.g = 255 - (currentColor.g /2)
+            iso.lightColor.b = 255 - (currentColor.b /2)
             iso.add(block, currentColor);
             isoObjects.push(block);
             currentColor.r += colorIncrement1;
             currentColor.g += colorIncrement2;
             currentColor.b += colorIncrement3;
-            iso.setLightPosition(
-              x * blockWidth + colorIncrement1 * 2,
-              y * blockDepth + colorIncrement2 * 2,
-              z * blockHeight - colorIncrement3 * 2
-            );
             currentColor.a = currentColor.r;
             if (currentColor.r >= 210 || currentColor.r <= 40)
               colorIncrement1 = -colorIncrement1;
@@ -123,7 +119,7 @@ export default function Home() {
         1,
         1
       );
-      blackColor.a = 0.9 - (Math.abs(currentColor.r - currentColor.g) / 255);
+      blackColor.a = 0.99 - (Math.abs(currentColor.r - currentColor.g) / 255);
       blackColor.r = currentColor.r;
       blackColor.g = currentColor.r;
       blackColor.b = currentColor.r;
