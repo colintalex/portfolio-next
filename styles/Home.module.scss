@@ -18,7 +18,7 @@
     border: 0.1px solid rgba(10, 255, 247, 0.55);
   }
   100% {
-    border: 0.2px solid rgba(255, 255, 255, 0);
+    border: 0.2px solid rgba(255, 255, 255, 0.2);
   }
 }
 
@@ -31,10 +31,11 @@
   .canvas_container {
     height: fit-content;
     width: fit-content;
-    // transform: rotate(30deg);
+    transform: rotate(30deg);
     animation: borderglow ease-out 6s;
     margin: auto;
-    background-color: #1a1a1a;
+    // background-color: #1a1a1a;
+    border: 0.2px solid rgba(255, 255, 255, 0.2);
     border-radius: 100%;
 
     canvas {
