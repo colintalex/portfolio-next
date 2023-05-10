@@ -12,6 +12,7 @@ export default function Home() {
   let val1;
   
   useEffect(() => {
+
     // browser code
     var canvas = document.getElementById("box_canvas");
     var iso = new Isomer(canvas);
@@ -26,15 +27,16 @@ export default function Home() {
         3
     );
   
-    var currentColor = new Isomer.Color(15, 160, 244, 0.5);
-    let colorIncrement1 = 0.013;
-    let colorIncrement2 = 0.014;
-    let colorIncrement3 = 0.015;
+    var currentColor = new Isomer.Color(5, 160, 244, 0.5);
+    let colorIncrement1 = 0.033;
+    let colorIncrement2 = 0.034;
+    let colorIncrement3 = 0.035;
     var angle = 0.0;
     var angleIncrement = 0.009;
     let isoObjects = [];
     
     function animateStack() {
+      requestAnimationFrame(animateStack);
       for (var x = 0; x < 3; x++) {
         for (var y = 0; y < 3; y++) {
           for (var z = 3; z > 0; z--) {
@@ -96,8 +98,7 @@ export default function Home() {
         colorIncrement2 = -colorIncrement2;
         if (currentColor.b >= 210 || currentColor.b <= 40)
         colorIncrement3 = -colorIncrement3;
-      }
-      
+      }      
       var blackColor = new Isomer.Color(value1, value2, value3, 1);
       var redColor3 = new Isomer.Color(0, 225, 225, 0.8);
       var smallBlockInner1 = new Isomer.Shape.Prism(
@@ -128,7 +129,6 @@ export default function Home() {
       var blockInner = new Isomer.Shape.Prism(Isomer.Point(-5, -5, 7.4), 2, 2, 2);
       iso.add(blockInner, blackColor);
       isoObjects.push(blockInner);
-      requestAnimationFrame(animateStack);
       
     }
     
