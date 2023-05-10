@@ -43,7 +43,6 @@ export default function Home() {
     let isoObjects = [];
     
     function animateStack() {
-
       if (randomNumber < 250) {
         randomNumber++;
       } else {
@@ -77,38 +76,39 @@ export default function Home() {
             iso.lightColor.b = 255 - (currentColor.b /2)
             iso.add(block, currentColor);
             isoObjects.push(block);
+            
             currentColor.r += colorIncrement1;
             currentColor.g += colorIncrement2;
             currentColor.b += colorIncrement3;
             currentColor.a = currentColor.r;
             if (currentColor.r >= 210 || currentColor.r <= 40)
-              colorIncrement1 = -colorIncrement1;
+            colorIncrement1 = -colorIncrement1;
             if (currentColor.g >= 210 || currentColor.g <= 40)
-              colorIncrement2 = -colorIncrement2;
+            colorIncrement2 = -colorIncrement2;
             if (currentColor.b >= 210 || currentColor.b <= 40)
-              colorIncrement3 = -colorIncrement3;
+            colorIncrement3 = -colorIncrement3;
           }
           currentColor.r += colorIncrement1;
           currentColor.g += colorIncrement2;
           currentColor.b += colorIncrement3;
           if (currentColor.r >= 210 || currentColor.r <= 40)
-            colorIncrement1 = -colorIncrement1;
+          colorIncrement1 = -colorIncrement1;
           if (currentColor.g >= 210 || currentColor.g <= 40)
-            colorIncrement2 = -colorIncrement2;
+          colorIncrement2 = -colorIncrement2;
           if (currentColor.b >= 210 || currentColor.b <= 40)
-            colorIncrement3 = -colorIncrement3;
+          colorIncrement3 = -colorIncrement3;
         }
         currentColor.r += colorIncrement1;
         currentColor.g += colorIncrement2;
         currentColor.b += colorIncrement3;
         if (currentColor.r >= 210 || currentColor.r <= 40)
-          colorIncrement1 = -colorIncrement1;
+        colorIncrement1 = -colorIncrement1;
         if (currentColor.g >= 210 || currentColor.g <= 40)
-          colorIncrement2 = -colorIncrement2;
+        colorIncrement2 = -colorIncrement2;
         if (currentColor.b >= 210 || currentColor.b <= 40)
-          colorIncrement3 = -colorIncrement3;
+        colorIncrement3 = -colorIncrement3;
       }
-  
+      
       var blackColor = new Isomer.Color(value1, value2, value3, 1);
       var redColor1 = new Isomer.Color(255, 140, 0, 0.4);
       var redColor2 = new Isomer.Color(255, 165, 0, 0.4);
@@ -118,17 +118,17 @@ export default function Home() {
         1,
         1,
         1
-      );
-      blackColor.a = 0.99 - (Math.abs(currentColor.r - currentColor.g) / 255);
-      blackColor.r = currentColor.r;
-      blackColor.g = currentColor.r;
+        );
+        blackColor.a = 0.99 - (Math.abs(currentColor.r - currentColor.g) / 255);
+        blackColor.r = currentColor.r;
+        blackColor.g = currentColor.r;
       blackColor.b = currentColor.r;
-
+      
       redColor3.a = -blackColor.a;
       redColor3.r = 255 - currentColor.r;
       redColor3.g = 255 - currentColor.g;
       redColor3.b = 255 - currentColor.b;
-  
+      
       smallBlockInner1 = smallBlockInner1.rotateZ(Isomer.Point(0.6, 0.7, 1), angle);
       smallBlockInner1 = smallBlockInner1.rotateX(Isomer.Point(0.6, 0.7, 3.95), angle);
       smallBlockInner1 = smallBlockInner1.rotateY(Isomer.Point(0.5, 0, 3.8), angle);
@@ -137,18 +137,15 @@ export default function Home() {
       if (angle > Math.PI * 2) angle -= Math.PI * 2;
       iso.add(smallBlockInner1, redColor3);
       isoObjects.push(smallBlockInner1);
-  
+      
       var blockInner = new Isomer.Shape.Prism(Isomer.Point(-5, -5, 7.4), 2, 2, 2);
       iso.add(blockInner, blackColor);
       isoObjects.push(blockInner);
-  
-      setTimeout(function () {
-        iso.canvas.clear();
-        animateStack();
-      }, 10);
+      requestAnimationFrame(animateStack);
+      
     }
     
-    animateStack();
+    requestAnimationFrame(animateStack);
   },[]);
   
 
@@ -160,6 +157,7 @@ export default function Home() {
 
   function setValue(event) {
     let number = event.target.valueAsNumber;
+    console.log(number);
     switch(event.target.id){
       case 'red_input':
         setValue1(number)
@@ -202,8 +200,8 @@ export default function Home() {
                 {/* <input
                   id="red_input"
                   type="range"
-                  min={-1}
-                  max={1}
+                  min={-2}
+                  max={2}
                   step={0.02}
                   value={value1}
                   onChange={(event) => {
@@ -213,8 +211,8 @@ export default function Home() {
                 <input
                   id="blue_input"
                   type="range"
-                  min={0}
-                  max={1}
+                  min={-2}
+                  max={2}
                   step={0.02}
                   value={value2}
                   onChange={(event) => {
@@ -224,8 +222,8 @@ export default function Home() {
                 <input
                   id="green_input"
                   type="range"
-                  min={0}
-                  max={1}
+                  min={-2}
+                  max={2}
                   step={0.02}
                   value={value3}
                   onChange={(event) => {

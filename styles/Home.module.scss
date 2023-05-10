@@ -9,6 +9,18 @@
 @mixin animate($animation, $duration, $delay, $method, $times) {
   animation: $animation $duration $delay $method $times;
 }
+@keyframes borderglow {
+  0% {
+    border: 1px solid rgba(255, 255, 255, 0);
+  }
+
+  80% {
+    border: 0.1px solid rgba(10, 255, 247, 0.55);
+  }
+  100% {
+    border: 0.2px solid rgba(255, 255, 255, 0);
+  }
+}
 
 .landing_grid {
   display: grid;
@@ -19,13 +31,15 @@
   .canvas_container {
     height: fit-content;
     width: fit-content;
-    transform: rotate(30deg);
+    // transform: rotate(30deg);
+    animation: borderglow ease-out 6s;
     margin: auto;
-    background-color: #212020;
+    background-color: #1a1a1a;
     border-radius: 100%;
 
     canvas {
       position: relative;
+      animation: rotation 5s ease-in-out;
       top: 70px;
     }
   }
