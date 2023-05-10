@@ -1,13 +1,6 @@
 import Head from "next/head";
-import Image from "next/image";
 import styles from "../styles/Home.module.scss";
 import PageChunk from "../components/page_chunk";
-import Nav from "../components/nav";
-import AboutMe from "../components/about/about_me";
-import Experience from "../components/experience/experience";
-import Card from "../components/card";
-import Education from "../components/education/education";
-import Skills from "../components/skills";
 import Isomer from "isomer/js/isomer";
 import { useEffect, useState } from "react";
 
@@ -33,8 +26,7 @@ export default function Home() {
         3
     );
   
-    var randomNumber = Math.floor(Math.random() * 256);
-    var currentColor = new Isomer.Color(50, 160, 244, 0.5);
+    var currentColor = new Isomer.Color(15, 160, 244, 0.5);
     let colorIncrement1 = 0.013;
     let colorIncrement2 = 0.014;
     let colorIncrement3 = 0.015;
@@ -43,11 +35,6 @@ export default function Home() {
     let isoObjects = [];
     
     function animateStack() {
-      if (randomNumber < 250) {
-        randomNumber++;
-      } else {
-        randomNumber--;
-      }
       for (var x = 0; x < 3; x++) {
         for (var y = 0; y < 3; y++) {
           for (var z = 3; z > 0; z--) {
@@ -58,12 +45,14 @@ export default function Home() {
             if (z == 2 && x == 2 && y == 0 ) continue;
             if (z == 1 && x == 1 && y == 0 ) continue;
             if (z == 1 && x == 0 && y == 1 ) continue;
+
+            
             var blockPosition = new Isomer.Point(
               x * blockWidth,
               y * blockDepth,
               z * blockHeight
-            );
-  
+              );
+              
             var block = new Isomer.Shape.Prism(
               blockPosition,
               blockWidth,
@@ -110,8 +99,6 @@ export default function Home() {
       }
       
       var blackColor = new Isomer.Color(value1, value2, value3, 1);
-      var redColor1 = new Isomer.Color(255, 140, 0, 0.4);
-      var redColor2 = new Isomer.Color(255, 165, 0, 0.4);
       var redColor3 = new Isomer.Color(0, 225, 225, 0.8);
       var smallBlockInner1 = new Isomer.Shape.Prism(
         Isomer.Point(0, 0, 3.4),
