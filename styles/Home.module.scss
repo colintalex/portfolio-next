@@ -14,11 +14,8 @@
     border: 1px solid rgba(255, 255, 255, 0);
   }
 
-  80% {
-    border: 0.1px solid rgba(10, 255, 247, 0.55);
-  }
   100% {
-    border: 0.2px solid rgba(255, 255, 255, 0.2);
+    border: 0.1px solid rgba(10, 255, 247, 0.55);
   }
 }
 
@@ -32,7 +29,7 @@
     height: fit-content;
     width: fit-content;
     transform: rotate(30deg);
-    animation: borderglow ease-out 6s;
+    animation: borderglow 6s linear 0s infinite alternate;
     margin: auto;
     // background-color: #1a1a1a;
     border: 0.2px solid rgba(255, 255, 255, 0.2);
@@ -40,7 +37,7 @@
 
     canvas {
       position: relative;
-      animation: rotation 5s ease-in-out;
+      animation: rotation ease-in-out 5s infinite;
       top: 70px;
     }
   }
@@ -50,14 +47,14 @@
     font-family: 'Tilt Warp';
     
     .name {
-      color: teal;
+      color: rgb(220, 220, 220);
       font-size: 70px;
       border-bottom: 2px solid black;
     }
     
     .job_title {
       font-size: 40px;
-      color: rgb(226, 226, 226);
+      color: teal;
     }
     
     .job_title span {
