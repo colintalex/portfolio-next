@@ -18,6 +18,17 @@
     border: 0.1px solid rgba(10, 255, 247, 0.55);
   }
 }
+@keyframes rotateme {
+  0% {
+    transform: rotateZ(30deg)
+  }
+  50% {
+    transform: rotateZ(35deg)
+  }
+  100% {
+    transform: rotateZ(30deg)
+  }
+}
 
 .landing_grid {
   display: grid;
@@ -30,15 +41,15 @@
     width: fit-content;
     transform: rotate(30deg);
     animation: borderglow 6s linear 0s infinite alternate;
+    animation: rotateme 15s ease-in-out infinite;
     margin: auto;
     // background-color: #1a1a1a;
     border: 0.2px solid rgba(255, 255, 255, 0.2);
     border-radius: 100%;
-
     canvas {
       position: relative;
-      animation: rotation ease-in-out 5s infinite;
-      top: 70px;
+      top: -80px;
+      transform: translateZ(0)
     }
   }
 
@@ -208,8 +219,8 @@
 
 .container {
   padding: 0 2rem;
-  background-color: #272727;
-  background-image: url("./topo_base.svg");
+  background-color: black;
+  // background-image: url("./topo_base.svg");
 } 
 
 

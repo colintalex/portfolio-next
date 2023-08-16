@@ -13,126 +13,63 @@ export default function Home() {
   
   useEffect(() => {
 
-    // browser code
-    var canvas = document.getElementById("box_canvas");
-    var iso = new Isomer(canvas);
-    iso.canvasOrigin = new Isomer.Point(canvas.width / 2, canvas.height / 2);
-    var blockWidth = 1.1;
-    var blockDepth = 1.1;
-    var blockHeight = 1.1;
+      // Initialize Isomer
+    var iso = new Isomer(document.getElementById("box_canvas"), { useWorker: false });
 
-    iso.setLightPosition(
-        2,
-        5,
-        3
-    );
-  
-    var currentColor = new Isomer.Color(5, 160, 244, 0.5);
-    let colorIncrement1 = 0.033;
-    let colorIncrement2 = 0.034;
-    let colorIncrement3 = 0.035;
-    var angle = 0.0;
-    var angleIncrement = 0.009;
-    let isoObjects = [];
-    
-    function animateStack() {
-      requestAnimationFrame(animateStack);
-      for (var x = 0; x < 3; x++) {
-        for (var y = 0; y < 3; y++) {
-          for (var z = 3; z > 0; z--) {
-            // if (z >= 2 && x == 2 && y == 2) continue;
-            if (z >= 2 && x == 1 && y == 2 ) continue;
-            if (z >= 2 && x == 2 && y == 1 ) continue;
-            if (z == 2 && x == 0 && y == 2 ) continue;
-            if (z == 2 && x == 2 && y == 0 ) continue;
-            if (z == 1 && x == 1 && y == 0 ) continue;
-            if (z == 1 && x == 0 && y == 1 ) continue;
+    // Define block parameters
+    var size = 0.4; // Adjust this value to change the size of the blocks
+    var count = 12; // Adjust this value to change the number of blocks
 
-            
-            var blockPosition = new Isomer.Point(
-              x * blockWidth,
-              y * blockDepth,
-              z * blockHeight
-              );
-              
-            var block = new Isomer.Shape.Prism(
-              blockPosition,
-              blockWidth,
-              blockDepth,
-              blockHeight
-            );
-            currentColor.a = 0.2;
-            iso.lightColor.r = 255 - (currentColor.r /2)
-            iso.lightColor.g = 255 - (currentColor.g /2)
-            iso.lightColor.b = 255 - (currentColor.b /2)
-            iso.add(block, currentColor);
-            isoObjects.push(block);
-            
-            currentColor.r += colorIncrement1;
-            currentColor.g += colorIncrement2;
-            currentColor.b += colorIncrement3;
-            currentColor.a = currentColor.r;
-            if (currentColor.r >= 210 || currentColor.r <= 40)
-            colorIncrement1 = -colorIncrement1;
-            if (currentColor.g >= 210 || currentColor.g <= 40)
-            colorIncrement2 = -colorIncrement2;
-            if (currentColor.b >= 210 || currentColor.b <= 40)
-            colorIncrement3 = -colorIncrement3;
-          }
-          currentColor.r += colorIncrement1;
-          currentColor.g += colorIncrement2;
-          currentColor.b += colorIncrement3;
-          if (currentColor.r >= 210 || currentColor.r <= 40)
-          colorIncrement1 = -colorIncrement1;
-          if (currentColor.g >= 210 || currentColor.g <= 40)
-          colorIncrement2 = -colorIncrement2;
-          if (currentColor.b >= 210 || currentColor.b <= 40)
-          colorIncrement3 = -colorIncrement3;
-        }
-        currentColor.r += colorIncrement1;
-        currentColor.g += colorIncrement2;
-        currentColor.b += colorIncrement3;
-        if (currentColor.r >= 210 || currentColor.r <= 40)
-        colorIncrement1 = -colorIncrement1;
-        if (currentColor.g >= 210 || currentColor.g <= 40)
-        colorIncrement2 = -colorIncrement2;
-        if (currentColor.b >= 210 || currentColor.b <= 40)
-        colorIncrement3 = -colorIncrement3;
-      }      
-      var blackColor = new Isomer.Color(value1, value2, value3, 1);
-      var redColor3 = new Isomer.Color(0, 225, 225, 0.8);
-      var smallBlockInner1 = new Isomer.Shape.Prism(
-        Isomer.Point(0, 0, 3.4),
-        1,
-        1,
-        1
-        );
-        blackColor.a = 0.99 - (Math.abs(currentColor.r - currentColor.g) / 255);
-        blackColor.r = currentColor.r;
-        blackColor.g = currentColor.r;
-      blackColor.b = currentColor.r;
-      
-      redColor3.a = -blackColor.a;
-      redColor3.r = 255 - currentColor.r;
-      redColor3.g = 255 - currentColor.g;
-      redColor3.b = 255 - currentColor.b;
-      
-      smallBlockInner1 = smallBlockInner1.rotateZ(Isomer.Point(0.6, 0.7, 1), angle);
-      smallBlockInner1 = smallBlockInner1.rotateX(Isomer.Point(0.6, 0.7, 3.95), angle);
-      smallBlockInner1 = smallBlockInner1.rotateY(Isomer.Point(0.5, 0, 3.8), angle);
-      
-      angle += angleIncrement;
-      if (angle > Math.PI * 2) angle -= Math.PI * 2;
-      iso.add(smallBlockInner1, redColor3);
-      isoObjects.push(smallBlockInner1);
-      
-      var blockInner = new Isomer.Shape.Prism(Isomer.Point(-5, -5, 7.4), 2, 2, 2);
-      iso.add(blockInner, blackColor);
-      isoObjects.push(blockInner);
-      
+    // Define constants
+    const PI = Math.PI;
+
+    // Define cubes
+    var cubes = [];
+    var delayFactor1 = 3; // Adjust this value to change the speed of the ripple
+    var delayFactor2 = 2; // Adjust this value to change the speed of the ripple
+    var amplitude1 = 0.1; // Adjust this value to change the amplitude of the oscillation
+    var amplitude2 = .2; // Adjust this value to change the amplitude of the oscillation
+    for (var x = 0; x < count; x++) {
+      for (var y = 0; y < count; y++) {
+        cubes.push({
+          shape: new Isomer.Shape.Prism(new Isomer.Point(x * size, y * size, 0), size, size, size),
+          delay1: (x + y) / delayFactor1,
+          delay2: (x - y) / delayFactor2
+        });
+      }
     }
-    
-    requestAnimationFrame(animateStack);
+
+    // Function to get color based on amplitude
+    function getColor(amplitude) {
+      var r = Math.round((amplitude + 1) / 2 * 255);
+      var b = Math.round((1 - (amplitude + 1) / 2) * 255);
+      var a = r < b ? 0.9 : 1 / (r/b);
+      return new Isomer.Color(b, Math.abs(r-b), r, a);
+    }
+
+    // Animation loop
+    var t = 0;
+    function animate() {
+      // Clear canvas
+      iso.canvas.clear();
+
+      // Draw cubes with delay
+      for (var i = cubes.length - 1; i >= 0; i--) {
+        var tz = Math.sin(t - cubes[i].delay1 + 0.06 * i) * amplitude1 + Math.sin(t - cubes[i].delay2 + 0.05 * i) * amplitude2;
+        var color = getColor(tz / (2 * amplitude2));
+        iso.add(cubes[i].shape.translate(0, 0, tz), color);
+      }
+
+      // Update time
+      t = (t + 0.04) % (4 * PI);
+
+      // Request next frame
+      requestAnimationFrame(animate);
+    }
+
+    // Start animation
+    animate();
+
   },[]);
   
 
