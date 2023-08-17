@@ -50,7 +50,7 @@
     width: fit-content;
     animation: borderglow 6s linear 0s infinite alternate;
     // animation: rotateme 15s ease-in-out infinite;
-    margin: 30px auto;
+    margin: 20px auto;
     // background-color: #1a1a1a;
     border: 0.2px solid rgba(255, 255, 255, 0.2);
     border-radius: 100%;
@@ -94,6 +94,13 @@
 #pyramid_canvas {
   position: relative;
 
+}
+
+.social_icons {
+  color: white;
+  i {
+    margin: 6px;
+  }
 }
 
 .main {

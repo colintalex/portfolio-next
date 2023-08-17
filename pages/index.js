@@ -9,7 +9,6 @@ export default function Home() {
   const [value2, setValue2] = useState(0.14)
   const [value3, setValue3] = useState(0.14)
 
-  let val1;
   useEffect(() => {
     // Initialize Isomer
     var ctx = document.getElementById("box_canvas");
@@ -83,8 +82,6 @@ export default function Home() {
     // Start animation
     animate();
   }, []);
-
-
   
   return (
     <div className={styles.container}>
@@ -95,79 +92,28 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <PageChunk>
-          <div className={styles.landing_grid}>
-            <div className={styles.canvas_container}>
-              <canvas id="box_canvas" height="390" width="390"></canvas>
-              {/* <canvas id="pyramid_canvas" height="600" width="600"></canvas> */}
-            </div>
-            <div className={styles.info_container}>
-              <h1 className={styles.name}>colin alexander</h1>
-              <h4 className={styles.job_title}>
-                - fullstack software engineer -
-              </h4>
-              <h5 className={styles.sub_name}>
-                forever curious, always learning
-              </h5>
-
-              <div className={styles.slider_container}>
-                {/* <input
-                  id="red_input"
-                  type="range"
-                  min={-2}
-                  max={2}
-                  step={0.02}
-                  value={value1}
-                  onChange={(event) => {
-                    setValue(event);
-                  }}
-                />
-                <input
-                  id="blue_input"
-                  type="range"
-                  min={-2}
-                  max={2}
-                  step={0.02}
-                  value={value2}
-                  onChange={(event) => {
-                    setValue(event);
-                  }}
-                />
-                <input
-                  id="green_input"
-                  type="range"
-                  min={-2}
-                  max={2}
-                  step={0.02}
-                  value={value3}
-                  onChange={(event) => {
-                    setValue(event);
-                  }}
-                /> */}
-              </div>
+        <div className={styles.landing_grid}>
+          <div className={styles.canvas_container}>
+            <canvas id="box_canvas" height="390" width="390"></canvas>
+          </div>
+          <div className={styles.info_container}>
+            <h1 className={styles.name}>colin alexander</h1>
+            <h4 className={styles.job_title}>
+              - fullstack software engineer -
+            </h4>
+            <h5 className={styles.sub_name}>
+              forever curious, always learning
+            </h5>
+            <div className={styles.social_icons}>
+              <a href="https://www.linkedin.com/in/colintalex/" target="_blank">
+                <i class="bi bi-linkedin"></i>
+              </a>
+              <a href="https://github.com/colintalex" target="_blank">
+                <i class="bi bi-github"></i>
+              </a>
             </div>
           </div>
-
-        </PageChunk>
-          {/* <div className={styles.name}>
-            <hr />
-            <Skills />
-            <hr />
-          </div>
-        <Nav />
-        <PageChunk>
-          <div className={styles.avatar_wrapper}>
-            <Image
-              src="/colin_selfie.jpg"
-              width="300"
-              height="300"
-              className={styles.avatar}
-            />
-          </div>
-          <AboutMe />
-          <Experience />
-          <Education />
-        </PageChunk> */}
+        </div>
       </main>
     </div>
   );
