@@ -11,12 +11,21 @@
 }
 @keyframes borderglow {
   0% {
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 5px rgba(255, 255, 0, 0.45);
+  }
+
+  33% {
+    box-shadow: 0 0 5px rgba(255, 192, 203, 0.45);
+  }
+
+  66% {
+    box-shadow: 0 0 5px rgba(0, 0, 255, 0.45);
   }
 
   100% {
-    border: 0.1px solid rgba(10, 255, 247, 0.55);
+    box-shadow: 0 0 5px rgba(255, 255, 0, 0.45);
   }
+        
 }
 @keyframes rotateme {
   0% {
@@ -31,25 +40,22 @@
 }
 
 .landing_grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
   text-align: center;
   height: 100vh;
 
   .canvas_container {
     height: fit-content;
     width: fit-content;
-    transform: rotate(30deg);
     animation: borderglow 6s linear 0s infinite alternate;
-    animation: rotateme 15s ease-in-out infinite;
+    // animation: rotateme 15s ease-in-out infinite;
     margin: auto;
     // background-color: #1a1a1a;
     border: 0.2px solid rgba(255, 255, 255, 0.2);
     border-radius: 100%;
     canvas {
-      position: relative;
-      top: -80px;
-      transform: translateZ(0)
+      transform: translateZ(0);
     }
   }
 
@@ -59,12 +65,12 @@
     
     .name {
       color: rgb(220, 220, 220);
-      font-size: 70px;
+      font-size: 50px;
       border-bottom: 2px solid black;
     }
     
     .job_title {
-      font-size: 40px;
+      font-size: 25px;
       color: teal;
     }
     
@@ -73,7 +79,7 @@
     }
     
     .sub_name {
-      font-size: 30px;
+      font-size: 20px;
       color: gray !important;
     }
 
@@ -218,7 +224,7 @@
 
 
 .container {
-  padding: 0 2rem;
+  // padding: 0 2rem;
   background-color: black;
   // background-image: url("./topo_base.svg");
 } 
