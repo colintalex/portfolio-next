@@ -106,10 +106,10 @@ export default function Home() {
             </h5>
             <div className={styles.social_icons}>
               <a href="https://www.linkedin.com/in/colintalex/" rel="noreferrer" target="_blank">
-                <i class="bi bi-linkedin"></i>
+                <i className="bi bi-linkedin"></i>
               </a>
               <a href="https://github.com/colintalex" rel="noreferrer" target="_blank">
-                <i class="bi bi-github"></i>
+                <i className="bi bi-github"></i>
               </a>
             </div>
           </div>
