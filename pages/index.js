@@ -74,7 +74,7 @@ export default function Home() {
       }
 
       // Update time
-      t = (t + 0.04) % (4 * PI);
+      t = (t + 0.03) % (4 * PI);
 
       // Request next frame
       requestAnimationFrame(animate);
