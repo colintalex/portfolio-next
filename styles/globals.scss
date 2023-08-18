@@ -55,13 +55,13 @@ a {
 
   0%,
   45% {
-    opacity: 0.8;
+    opacity: 0;
     /* Cursor is visible */
   }
 
   55%,
   100% {
-    opacity: 0;
+    opacity: 0.8;
     /* Cursor is invisible */
   }
 }
@@ -72,8 +72,9 @@ a {
   color: rgba(255, 255, 255, 0.516);
 
   span {
-    animation: cursor-blink 1s ease-out 5;
+    opacity: 0.8;
     &.home {
+      animation: cursor-blink 1s linear 3;
       color: turquoise;
     }
     &.experience {
