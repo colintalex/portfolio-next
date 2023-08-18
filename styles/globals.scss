@@ -46,9 +46,41 @@ a {
 #qgis {
   background-color: yellow !important;
 } */
+.blinking-cursor {
+  font-size: 24px;
+
+}
+
+@keyframes cursor-blink {
+
+  0%,
+  45% {
+    opacity: 0.8;
+    /* Cursor is visible */
+  }
+
+  55%,
+  100% {
+    opacity: 0;
+    /* Cursor is invisible */
+  }
+}
 
 .page-title {
-  margin-left: 50px;
-  padding: 12px;
+  margin-left: 58px;
+  padding-top: 12px;
   color: rgba(255, 255, 255, 0.516);
+
+  span {
+    animation: cursor-blink 1s ease-out 5;
+    &.home {
+      color: turquoise;
+    }
+    &.experience {
+      color: magenta;
+    }
+    &.about {
+      color: gold;
+    }
+  }
 }

@@ -19,7 +19,7 @@ export default function Home() {
     var count = 12; // Adjust this value to change the number of blocks
     var initialX = 0; // Adjust this value to change the initial X position of the blocks
     var initialY = 0; // Adjust this value to change the initial Y position of the blocks
-    var initialZ = 0.5; // Adjust this value to change the initial Z height of the blocks
+    var initialZ = 0.25; // Adjust this value to change the initial Z height of the blocks
 
     // Define constants
     const PI = Math.PI;
@@ -91,10 +91,15 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <div className="page-title">
+        <h1>
+          <span className="home">|</span>
+        </h1>
+      </div>
       <main className={styles.main}>
         <div className={styles.landing_grid}>
           <div className={styles.canvas_container}>
-            <canvas id="box_canvas" height="390" width="390"></canvas>
+            <canvas id="box_canvas" height="360" width="390"></canvas>
           </div>
           <div className={styles.info_container}>
             <h1 className={styles.name}>colin alexander</h1>

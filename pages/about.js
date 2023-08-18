@@ -4,7 +4,9 @@ export default function About() {
   return (
     <>
       <div className="page-title">
-        <h1>| About Me</h1>
+        <h1>
+          <span className="about">|</span> About Me
+        </h1>
       </div>
       <div className={styles.img_wrapper}>
         <Image
