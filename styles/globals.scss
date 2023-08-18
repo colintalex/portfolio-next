@@ -47,12 +47,8 @@ a {
   background-color: yellow !important;
 } */
 
-.badge {
-  transition: all 0.2s;
-}
-.badge:hover {
-  transform: scale(1.05);
-}
-.p_content {
-  text-align: left;
+.page-title {
+  margin-left: 50px;
+  padding: 12px;
+  color: rgba(255, 255, 255, 0.516);
 }
