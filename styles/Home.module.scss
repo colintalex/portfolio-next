@@ -64,7 +64,7 @@
     margin-bottom: 20px;
     border-radius: 100%;
     opacity: 0;
-    animation: fade-in 2s ease-in-out forwards 2s;
+    animation: fade-in 2s ease-in-out forwards 2.5s;
     canvas {
       transform: translateZ(0); //enables GL rendering
     }
@@ -74,7 +74,7 @@
     margin: 10px auto;
     font-family: 'Tilt Warp';
     opacity: 0;
-    animation: fade-in 2s ease-in-out forwards 1s;
+    animation: fade-in 2s ease-in-out forwards 1.5s;
     
     .name {
       color: rgb(220, 220, 220);
