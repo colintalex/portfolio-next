@@ -4,13 +4,14 @@
 
 .nav_menu {
   display: flex;
-  position: sticky;
-  top: 0px;
+  position: fixed;
+  bottom: 0px;
   z-index: 1000;
   height: 50px;
   align-items: center;
   justify-content: space-around;
   margin: 10px 0;
+  width: 100%;
 
   a {
     border-bottom: 1px solid gray;
