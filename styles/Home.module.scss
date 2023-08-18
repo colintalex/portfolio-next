@@ -11,31 +11,31 @@
 }
 @keyframes borderglow {
   0% {
-    box-shadow: 0 0 5px rgba(255, 255, 0, 0.45);
+    box-shadow: inset 0 0 48px -10px rgba(255, 255, 0, 0.2);
   }
 
   33% {
-    box-shadow: 0 0 5px rgba(255, 192, 203, 0.45);
+    box-shadow: inset 0 0 48px -10px rgba(255, 192, 203, 0.2);
   }
 
   66% {
-    box-shadow: 0 0 5px rgba(0, 0, 255, 0.45);
+    box-shadow: inset 0 0 48px -10px rgba(85, 85, 254, 0.2);
   }
 
   100% {
-    box-shadow: 0 0 5px rgba(255, 255, 0, 0.45);
+    box-shadow: inset 0 0 48px -10px rgba(255, 255, 0, 0.2);
   }
         
 }
 @keyframes rotateme {
   0% {
-    transform: rotateZ(30deg)
+    transform: rotateZ(2.5deg)
   }
   50% {
-    transform: rotateZ(35deg)
+    transform: rotateZ(-2.5deg)
   }
   100% {
-    transform: rotateZ(30deg)
+    transform: rotateZ(2.5deg)
   }
 }
 
@@ -48,14 +48,12 @@
   .canvas_container {
     height: fit-content;
     width: fit-content;
-    animation: borderglow 6s linear 0s infinite alternate;
-    // animation: rotateme 15s ease-in-out infinite;
-    margin: 20px auto;
-    // background-color: #1a1a1a;
-    border: 0.2px solid rgba(255, 255, 255, 0.2);
+    // animation: borderglow 6s linear 0s infinite alternate;
+    animation: rotateme 15s ease-in-out infinite;
+    margin-bottom: 20px;
     border-radius: 100%;
     canvas {
-      transform: translateZ(0);
+      transform: translateZ(0); //enables GL rendering
     }
   }
 
@@ -231,9 +229,6 @@
 
 
 .container {
-  // padding: 0 2rem;
-  background-color: black;
-  // background-image: url("./topo_base.svg");
 } 
 
 

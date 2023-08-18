@@ -1,8 +1,8 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.scss";
-import PageChunk from "../components/page_chunk";
 import Isomer from "isomer/js/isomer";
 import { useEffect, useState } from "react";
+import Nav from "../components/nav";
 
 export default function Home() {
   const [value1, setValue1] = useState(0.14)
@@ -105,10 +105,18 @@ export default function Home() {
               forever curious, always learning
             </h5>
             <div className={styles.social_icons}>
-              <a href="https://www.linkedin.com/in/colintalex/" rel="noreferrer" target="_blank">
+              <a
+                href="https://www.linkedin.com/in/colintalex/"
+                rel="noreferrer"
+                target="_blank"
+              >
                 <i className="bi bi-linkedin"></i>
               </a>
-              <a href="https://github.com/colintalex" rel="noreferrer" target="_blank">
+              <a
+                href="https://github.com/colintalex"
+                rel="noreferrer"
+                target="_blank"
+              >
                 <i className="bi bi-github"></i>
               </a>
             </div>
