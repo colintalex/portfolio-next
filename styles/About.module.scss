@@ -1,8 +1,104 @@
-.img_wrapper {
-  width: 100%;
-  margin-top: 10px;
+/* About.module.scss */
+
+.about_container {
+  padding: 20px;
+  /* Increase padding for larger screens */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   text-align: center;
+}
+
+.title {
+  font-size: 24px;
+  /* Increase font size for larger screens */
+  color: #333;
+  margin-bottom: 20px;
+  /* Increase margin for larger screens */
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  /* Stack elements vertically on mobile */
+  align-items: center;
+  margin-top: 20px;
+  /* Increase margin for larger screens */
+}
+
+.img_wrapper {
+  border: 3px solid #333;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  /* Increase margin for larger screens */
+}
+
+.selfie_img {
+  border-radius: 50%;
+  width: 150px;
+  /* Adjust image size for larger screens */
+  height: 150px;
+  /* Adjust image size for larger screens */
+}
+
+.bio {
+  text-align: left;
+}
+
+.intro {
+  font-size: 16px;
+  /* Increase font size for larger screens */
+  color: #555;
+  margin-bottom: 10px;
+  /* Increase margin for larger screens */
+}
+
+.description {
+  font-size: 14px;
+  /* Increase font size for larger screens */
+  color: #777;
+  margin-bottom: 20px;
+  /* Increase margin for larger screens */
+}
+
+/* Media queries for larger screens */
+@media (min-width: 768px) {
+  .about_container {
+    padding: 40px;
+    /* Adjust padding for larger screens */
+  }
+
+  .title {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+
+  .profile {
+    flex-direction: row;
+    /* Display elements side by side on larger screens */
+    margin-top: 30px;
+  }
+
+  .img_wrapper {
+    margin-bottom: 0;
+    /* Remove margin for larger screens */
+  }
+
   .selfie_img {
-    border-radius: 100%;
+    width: 300px;
+    /* Adjust image size for larger screens */
+    height: 300px;
+    /* Adjust image size for larger screens */
+  }
+
+  .intro {
+    font-size: 18px;
+    margin-bottom: 20px;
+    /* Increase margin for larger screens */
+  }
+
+  .description {
+    font-size: 16px;
+    margin-bottom: 0;
+    /* Remove margin for larger screens */
   }
 }
