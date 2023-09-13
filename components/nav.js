@@ -8,7 +8,6 @@ import { usePathname } from "next/navigation";
 
 export default function Nav() {
   const [show, setShow] = useState(false);``
-
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const currentRoute = usePathname();
@@ -19,7 +18,7 @@ export default function Nav() {
         href="/"
         className={
           currentRoute === "/"
-            ? styles.active_class_name
+            ? styles.active_class_name_home
             : styles.non_active_class_name
         }
       >
@@ -29,7 +28,7 @@ export default function Nav() {
         href="/experience"
         className={
           currentRoute === "/experience"
-            ? styles.active_class_name
+            ? styles.active_class_name_experience
             : styles.non_active_class_name
         }
       >
@@ -39,7 +38,7 @@ export default function Nav() {
         href="/about"
         className={
           currentRoute === "/about"
-            ? styles.active_class_name
+            ? styles.active_class_name_about
             : styles.non_active_class_name
         }
       >

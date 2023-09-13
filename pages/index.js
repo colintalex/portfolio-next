@@ -2,12 +2,17 @@ import Head from "next/head";
 import styles from "../styles/Home.module.scss";
 import Isomer from "isomer/js/isomer";
 import { useEffect, useState } from "react";
-import Nav from "../components/nav";
 
 export default function Home() {
-  const [value1, setValue1] = useState(0.14)
-  const [value2, setValue2] = useState(0.14)
-  const [value3, setValue3] = useState(0.14)
+  const [hasVisited, setHasVisited] = useState(false);
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      if (!localStorage.getItem("hasVisited")){
+        localStorage.setItem("hasVisited", true);
+      }
+    }
+  },[])
 
   useEffect(() => {
     // Initialize Isomer
@@ -91,7 +96,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="page-title">
+      <div
+        className={`page-title ${hasVisited ? '' : 'initial-load'}`}
+      >
         <h1>
           <span className="home">|</span>
         </h1>

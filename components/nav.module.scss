@@ -12,12 +12,22 @@
   justify-content: space-around;
   margin: 10px 0;
   width: 100%;
-
+  background: black;
+  margin-bottom: -1px;
   a {
     border-bottom: 1px solid gray;
-    &.active_class_name {
+    opacity: 0.8;
+    &.active_class_name_about {
       color: gray;
-      border-bottom: 3px solid rgba(0, 128, 128, 0.7);
+      border-bottom: 3px solid gold;
+    }
+    &.active_class_name_home {
+      color: gray;
+      border-bottom: 3px solid turquoise;
+    }
+    &.active_class_name_experience {
+      color: gray;
+      border-bottom: 3px solid magenta
     }
   }
 }

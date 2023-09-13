@@ -5,7 +5,7 @@ export default function About() {
     <>
       <div className="page-title">
         <h1>
-          <span className="about">|</span> About Me
+          <span className="about">|</span>
         </h1>
       </div>
       <div className={styles.img_wrapper}>

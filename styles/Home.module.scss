@@ -64,7 +64,7 @@
     margin-bottom: 20px;
     border-radius: 100%;
     opacity: 0;
-    animation: fade-in 2s ease-in-out forwards 2.5s;
+    animation: fade-in 2.5s ease-in-out forwards;
     canvas {
       transform: translateZ(0); //enables GL rendering
     }
@@ -74,17 +74,26 @@
     margin: 10px auto;
     font-family: 'Tilt Warp';
     opacity: 0;
-    animation: fade-in 2s ease-in-out forwards 1.5s;
+    animation: fade-in 2.5s ease-in-out forwards;
+  transition-duration: 0.2s;
     
     .name {
       color: rgb(220, 220, 220);
       font-size: 50px;
       border-bottom: 2px solid black;
+      scale: 1.0;
+      &:hover {
+        scale: 1.006;
+      }
     }
     
     .job_title {
       font-size: 25px;
       color: teal;
+      scale: 1.0;
+      &:hover {
+        scale: 1.006;
+      }
     }
     
     .job_title span {
@@ -94,6 +103,10 @@
     .sub_name {
       font-size: 20px;
       color: gray !important;
+      scale: 1.0;
+      &:hover {
+        scale: 1.006;
+      }
     }
 
     .slider_container {
@@ -111,8 +124,19 @@
 
 .social_icons {
   color: white;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-evenly;
+
   i {
-    margin: 6px;
+    font-size: 22px;
+    transition-duration: 0.2s;
+    &:hover {
+      font-size: 23px;
+      color: turquoise;
+      opacity: 0.8;
+    }
+    margin: 10px 12px;
   }
 }
 
