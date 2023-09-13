@@ -23,12 +23,12 @@ export default function About() {
             </div>
             <div className={styles.bio}>
               <p className={styles.intro}>
-                Hello, I'm Colin. I'm a passionate software engineer with a love
+                Hello, I&apos;m Colin. I&apos;m a passionate software engineer with a love
                 for coding and problem-solving.
               </p>
               <p className={styles.description}>
                 I have a versatile skill set, with a strong foundation in Ruby
-                on Rails, and I'm proficient in various frontend frameworks. My
+                on Rails, and I&apos;m proficient in various frontend frameworks. My
                 aim is to craft innovative and user-friendly solutions.
               </p>
               <p className={styles.description}>
@@ -41,7 +41,7 @@ export default function About() {
               <p className={styles.description}>
                 <strong>What I say to my friends:</strong> Experienced A code
                 samurai training to be a digital assassin. I seek challenge, if
-                I'm not being pushed I'm not learning, and thats no fun.
+                I&apos;m not being pushed I&apos;m not learning, and thats no fun.
               </p>
             </div>
           </div>
