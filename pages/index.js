@@ -96,13 +96,6 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div
-        className={`page-title ${hasVisited ? '' : 'initial-load'}`}
-      >
-        <h1>
-          <span className="home">|</span>
-        </h1>
-      </div>
       <main className={styles.main}>
         <div className={styles.landing_grid}>
           <div className={styles.canvas_container}>

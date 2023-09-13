@@ -67,26 +67,20 @@ a {
 }
 
 .initial-load {
-  span.home {
+  .home_title {
     animation: cursor-blink 1s linear 3;
   }
 }
-.page-title {
-  margin-left: 58px;
-  padding-top: 12px;
-  padding-bottom: 12px;
-  color: rgba(255, 255, 255, 0.516);
 
-  span {
-    opacity: 0.8;
-    &.home {
-      color: turquoise;
-    }
-    &.experience {
-      color: magenta;
-    }
-    &.about {
-      color: gold;
-    }
-  }
+.home_title {
+  opacity: 0.8;
+  color: turquoise;
+}
+.experience_title {
+  opacity: 0.8;
+  color: magenta;
+}
+.about_title {
+  opacity: 0.8;
+  color: gold;
 }

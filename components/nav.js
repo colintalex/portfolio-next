@@ -2,8 +2,9 @@ import styles from "./nav.module.scss";
 import Link from "next/link";
 import { Button } from "react-bootstrap";
 import { Offcanvas } from "react-bootstrap";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import { usePathname } from "next/navigation";
+import { useRouter } from "next/router";
 
 
 export default function Nav() {
@@ -11,8 +12,22 @@ export default function Nav() {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const currentRoute = usePathname();
+  let colorClass = '';
+
+  switch (currentRoute){
+    case '/':
+      colorClass = 'home_title'
+      break; 
+    case '/experience':
+      colorClass = 'experience_title'
+      break; 
+    case '/about':
+      colorClass = 'about_title'
+      break; 
+  }
 
   return (
+    <>
     <div className={styles.nav_menu}>
       <Link
         href="/"
@@ -45,5 +60,11 @@ export default function Nav() {
         <h1>about</h1>
       </Link>
     </div>
+    <div className={styles.page_title}>
+      <h1>
+        <span className={colorClass}>|</span>
+      </h1>
+    </div>
+    </>
   );
 }

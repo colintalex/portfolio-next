@@ -34,6 +34,30 @@
   }
 }
 
+.page_title {
+  position: absolute;
+  margin-left: 58px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  color: rgba(255, 255, 255, 0.516);
+
+  span {
+    opacity: 0.8;
+
+    &.home {
+      color: turquoise;
+    }
+
+    &.experience {
+      color: magenta;
+    }
+
+    &.about {
+      color: gold;
+    }
+  }
+}
+
 .nav_item {
   color: black;
   background-color: white;

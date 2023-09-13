@@ -1,14 +1,10 @@
 import Skills from "../components/skills";
 import WorkHistory from "../components/work_history";
+import styles from '../styles/Experience.module.scss'
 
 export default function Experience() {
   return (
-    <div>
-      <div className="page-title">
-        <h1>
-          <span className="experience">|</span>
-        </h1>
-      </div>
+    <div className={styles.container}>
       <Skills/>
       <WorkHistory/>
     </div>

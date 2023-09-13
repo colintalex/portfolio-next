@@ -4,11 +4,6 @@ import styles from "../styles/About.module.scss";
 export default function About() {
   return (
     <>
-      <div className="page-title">
-        <h1>
-          <span className="about">|</span>
-        </h1>
-      </div>
       <div className={styles.about_container}>
         <div className={styles.about_content}>
           <div className={styles.profile}>
