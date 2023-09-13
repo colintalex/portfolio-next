@@ -51,7 +51,14 @@
 
 .progress_bar {
   height: 100%;
-  background-color: magenta;
+  background-color: rgb(202, 2, 202);
+  /* Change the color as desired */
+  border-radius: 5px;
+  transition: width 1s ease-in-out;
+}
+.progress_bar_framework {
+  height: 100%;
+  background-color: rgb(0, 191, 191);
   /* Change the color as desired */
   border-radius: 5px;
   transition: width 1s ease-in-out;

@@ -76,7 +76,7 @@ export default function Skills() {
               <div className={styles.skill_label}>{framework}</div>
               <div className={styles.progress_container}>
                 <div
-                  className={styles.progress_bar}
+                  className={styles.progress_bar_framework}
                   style={{
                     width: animationComplete ? `${(level / 10) * 100}%` : "0%",
                     transition: animationComplete
