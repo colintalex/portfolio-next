@@ -23,8 +23,8 @@ export default function About() {
               </p>
               <p className={styles.description}>
                 I have a versatile skill set, with a strong foundation in Ruby
-                on Rails, and I&apos;m proficient in various frontend frameworks. My
-                aim is to craft innovative and user-friendly solutions.
+                on Rails and relational database management.I&apos;m generally proficient in various frontend frameworks and have proven to be a rapid learner. My
+                aim is to craft user-friendly solutions that are visually appealing and intuitive to use.
               </p>
               <br/>
               <p className={styles.description}>
