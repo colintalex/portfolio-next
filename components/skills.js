@@ -3,16 +3,18 @@ import styles from "./skills.module.scss";
 
 export default function Skills() {
   const skills = [
-    ["RoR/Ruby", 10],
+    ["Ruby", 10],
     ["PostgreSQL", 9],
     ["JavaScript", 8],
     ["Linux OS", 7],
-    ["Python", 6],
-    ["GoogleCloud", 6],
+    ["Python", 7],
+    ["Docker", 6],
+    ["MongoDB", 6],
+    ["GoogleCloud", 5],
   ];
 
   const frameworks = [
-    ["RoR", 10],
+    ["Ruby on Rails", 10],
     ["Stimulus.js", 9],
     ["React.js", 7],
     ["Express.js", 7],
