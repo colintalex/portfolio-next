@@ -39,6 +39,11 @@
   margin-left: 58px;
   padding-top: 12px;
   padding-bottom: 12px;
+
+  @media (min-width: 700px) {
+    padding-top: 5px;
+      /* Styles for desktop */
+    }
   color: rgba(255, 255, 255, 0.516);
 
   span {

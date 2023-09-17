@@ -18,14 +18,15 @@ export default function About() {
             </div>
             <div className={styles.bio}>
               <p className={styles.intro}>
-                Hello, I&apos;m Colin. I&apos;m a passionate software engineer with a love
-                for coding and problem-solving.
+                Hello, I&apos;m Colin. I&apos;m a passionate software engineer with a steadfast hunger
+                for complex challenges and elegant yet simple solutions.
               </p>
               <p className={styles.description}>
                 I have a versatile skill set, with a strong foundation in Ruby
                 on Rails, and I&apos;m proficient in various frontend frameworks. My
                 aim is to craft innovative and user-friendly solutions.
               </p>
+              <br/>
               <p className={styles.description}>
                 <strong>What I say during interviews:</strong> Experienced
                 Software Engineer with pragmatic decision-making and a solid
@@ -33,8 +34,9 @@ export default function About() {
                 Obsessed with simplicity and eager to learn, developing a knack
                 for debugging and a strong technical intuition.
               </p>
+              <br/>
               <p className={styles.description}>
-                <strong>What I say to my friends:</strong> Experienced A code
+                <strong>What I say to my friends:</strong> A code
                 samurai training to be a digital assassin. I seek challenge, if
                 I&apos;m not being pushed I&apos;m not learning, and thats no fun.
               </p>
