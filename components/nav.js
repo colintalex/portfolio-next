@@ -27,44 +27,46 @@ export default function Nav() {
   }
 
   return (
-    <>
-    <div className={styles.nav_menu}>
-      <Link
-        href="/"
-        className={
-          currentRoute === "/"
-            ? styles.active_class_name_home
-            : styles.non_active_class_name
-        }
-      >
-        <h1>home</h1>
-      </Link>
-      <Link
-        href="/experience"
-        className={
-          currentRoute === "/experience"
-            ? styles.active_class_name_experience
-            : styles.non_active_class_name
-        }
-      >
-        <h1>experience</h1>
-      </Link>
-      <Link
-        href="/about"
-        className={
-          currentRoute === "/about"
-            ? styles.active_class_name_about
-            : styles.non_active_class_name
-        }
-      >
-        <h1>about</h1>
-      </Link>
-    </div>
-    <div className={styles.page_title}>
-      <h1>
-        <span className={colorClass}>|</span>
-      </h1>
-    </div>
-    </>
+    <nav
+      className="navbar bg-dark navbar-expand-lg border-bottom border-body"
+      data-bs-theme="dark"
+    >
+      <div className="container-fluid">
+        <a className="navbar-brand text-secondary" href="#">
+          <i className="bi bi-cloud-lightning text-info fs-1 ms-3 mb-0 pb-0"></i> 
+        </a>
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarText"
+          aria-controls="navbarText"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" id="navbarText">
+          <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li className="nav-item">
+              <a className="nav-link active" aria-current="page" href="#">
+                Home
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#">
+                Features
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#">
+                Pricing
+              </a>
+            </li>
+          </ul>
+          {/* <span className="navbar-text">Navbar text with an inline element</span>  */}
+        </div>
+      </div>
+    </nav>
   );
 }

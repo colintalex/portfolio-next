@@ -17,7 +17,8 @@
     "react": "^18.2.0",
     "react-bootstrap": "^2.2.1",
     "react-dom": "^18.2.0",
-    "react-useinterval": "^1.0.2"
+    "react-useinterval": "^1.0.2",
+    "three": "^0.168.0"
   },
   "devDependencies": {
     "eslint": "8.11.0",

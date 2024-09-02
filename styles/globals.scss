@@ -1,14 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee&family=Hubballi&family=Tilt+Warp&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap');
 
 html,
 body {
   height: 100%;
   width: 100%;
-  overflow: scroll;
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-family: SUSE, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   background-color: #000;
 }

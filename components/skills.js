@@ -5,21 +5,22 @@ export default function Skills() {
   const skills = [
     ["Ruby", 10],
     ["PostgreSQL", 9],
-    ["JavaScript", 8],
-    ["Linux OS", 7],
-    ["Python", 7],
-    ["Docker", 6],
+    ["JavaScript", 9],
+    ["Linux OS", 8],
+    ["Docker", 8],
+    ["G", 8],
+    ["GoogleCloud", 7],
     ["MongoDB", 6],
-    ["GoogleCloud", 5],
+    ["Python", 6],
   ];
 
   const frameworks = [
-    ["Ruby on Rails", 10],
-    ["Stimulus.js", 9],
+    ["Rails", 10],
+    ["Hotwire", 9],
     ["React.js", 7],
     ["Express.js", 7],
     ["Ember.js", 6],
-    ["Flask", 5],
+    ["Flaskh", 5],
   ];
 
   const [animationComplete, setAnimationComplete] = useState(false);
