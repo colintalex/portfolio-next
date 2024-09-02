@@ -26,7 +26,7 @@ export default function Home() {
       <main className={styles.main}>
         <div className="row mt-1 mt-md-4">
           <div className="col-12 col-md-6 order-1 mb-3">
-            <div className="text-light text-light p-2 p-md-3 rounded h-100">
+            <div className="text-light text-light p-2 p-md-3 rounded h-100 border border-dark">
               <svg
                 id={styles.logo}
                 width="806"
@@ -100,10 +100,10 @@ export default function Home() {
           <div className="col-12 col-md-6 mb-3 md-md-0 order-2 order-md-3">
             <div className="bg-info bg-opacity-10 text-light p-3 text-center rounded">
               <div className="border-border-secondary">
-                <p class="display-3 border-bottom border-secondary w-auto mx-auto fw-medium opacity-75">
+                <p className="display-3 border-bottom border-secondary w-auto mx-auto fw-medium opacity-75">
                   Colin Alexander
                 </p>
-                <p class="display-5 fw-lighter text-secondary">
+                <p className="display-5 fw-lighter text-secondary">
                   fullstack software engineer
                 </p>
               </div>
@@ -112,7 +112,7 @@ export default function Home() {
           <div className="col-12 col-md-6 mb-3 md-md-0 order-3 order-md-4">
             <div className="bg-info bg-opacity-10 text-light p-3 text-center rounded h-100">
               <div className=" text-secondary border-border-secondary">
-                <p class="fs-3 mb-1">Keep Learning, Provide Value</p>
+                <p className="fs-3 mb-1">Keep Learning and Deliver Value</p>
                 <hr className="mt-1 mb-3 w-75 mx-auto"></hr>
                 <p>
                   I thrive on pushing the boundaries of technology to deliver
