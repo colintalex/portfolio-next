@@ -64,11 +64,6 @@ export default function About() {
               </div>
               <div className="carousel-item h-100 position-relative">
                 <div className="bg-transparent h-100">
-                  <img
-                    src="apaz_1.png"
-                    className="d-block w-100 card-img-top rounded-top"
-                    alt="..."
-                  />
                   <div className="card-body small rounded-bottom px-2 py-1 bg-dark text-light">
                     <p>Alpha Project Training Arizona</p>
                     <ul>
@@ -84,11 +79,6 @@ export default function About() {
               </div>
               <div className="carousel-item h-100 position-relative">
                 <div className="bg-transparent h-100">
-                  <img
-                    src="apaz_1.png"
-                    className="d-block w-100 card-img-top rounded-top"
-                    alt="..."
-                  />
                   <div className="card-body small rounded-bottom px-2 py-1 bg-dark text-light">
                     <p>Alpha Project Training Arizona</p>
                     <ul>

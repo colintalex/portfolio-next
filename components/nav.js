@@ -29,7 +29,7 @@ export default function Nav() {
             aria-controls="pills-home"
             aria-selected="true"
           >
-            <a href="/">Home</a>
+            <Link href="/">Home</Link>
           </button>
         </li>
         <li className="nav-item" role="presentation">
@@ -45,7 +45,7 @@ export default function Nav() {
             aria-controls="pills-home"
             aria-selected="true"
           >
-            <a href="/about">About Me</a>
+            <Link href="/about">About Me</Link>
           </button>
         </li>
         <li className="nav-item" role="presentation">
@@ -61,7 +61,7 @@ export default function Nav() {
             aria-controls="pills-home"
             aria-selected="true"
           >
-            <a href="/">Projects</a>
+            <Link href="/">Projects</Link>
           </button>
         </li>
       </ul>

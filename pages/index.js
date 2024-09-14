@@ -53,13 +53,16 @@ export default function Home() {
                   I am a lifelong learner/builder, and I love clean, clever and
                   simple.
                   <br></br>
-                  Whether its wood and steel, or bits and servers, I'm simply
-                  fascinated by reality. It's constantly evolving, and I'm here
-                  for the ride!
+                  Whether its wood and steel, or bits and servers, I&apos;m
+                  simply fascinated by reality. It&apos;s constantly evolving,
+                  and I&apos;m here for the ride!
                 </p>
                 <p>
-                  I focus primarily on RubyonRails but I also work with Node.js servers and various client side frameworks, such as React, Next(this website), Ember and Hotwire.
-                  On top of that, I have vast experience in both on-site and GCP cloud deployments both for professional and personal projects.
+                  I focus primarily on RubyonRails but I also work with Node.js
+                  servers and various client side frameworks, such as React,
+                  Next(this website), Ember and Hotwire. On top of that, I have
+                  vast experience in both on-site and GCP cloud deployments both
+                  for professional and personal projects.
                 </p>
               </div>
             </div>
