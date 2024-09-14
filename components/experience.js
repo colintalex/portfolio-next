@@ -3,7 +3,7 @@ import styles from "./work_history.module.scss";
 export default function Experience() {
   const workHistory = [
     {
-      company: "Sanborn",
+      company: "Sanborn Geospatial",
       position: "Fullstack Engineer",
       startDate: "Sept 2023",
       endDate: "Present",
@@ -14,7 +14,7 @@ export default function Experience() {
       ],
     },
     {
-      company: "Sanborn",
+      company: "Sanborn Geospatial",
       position: "Software Engineer II",
       startDate: "Sept 2022",
       endDate: "Sept 2023",
@@ -25,7 +25,7 @@ export default function Experience() {
       ],
     },
     {
-      company: "Sanborn",
+      company: "Sanborn Geospatial",
       position: "Software Engineer I",
       startDate: "June 2021",
       endDate: "Sept 2022",
