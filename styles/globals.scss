@@ -23,6 +23,20 @@ a {
   box-sizing: border-box;
 }
 
+.navbar   {
+  .nav-item {
+    button.active {
+      border: 1px solid turquoise !important;
+      background-color: transparent !important;
+      color: whitesmoke !important;
+    }
+    a {
+      text-decoration: none !important;
+    }
+  }
+  color: red;
+}
+
 
 /* #ruby {
   background-color: red !important;

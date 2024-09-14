@@ -12,61 +12,59 @@ export default function Nav() {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const currentRoute = usePathname();
-  let colorClass = '';
-
-  switch (currentRoute){
-    case '/':
-      colorClass = 'home_title'
-      break; 
-    case '/experience':
-      colorClass = 'experience_title'
-      break; 
-    case '/about':
-      colorClass = 'about_title'
-      break; 
-  }
 
   return (
-    <nav
-      className="navbar bg-dark navbar-expand-lg border-bottom border-body"
-      data-bs-theme="dark"
-    >
-      <div className="container-fluid">
-        <a className="navbar-brand text-secondary" href="#">
-          <i className="bi bi-cloud-lightning text-info fs-1 ms-3 mb-0 pb-0"></i> 
-        </a>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarText"
-          aria-controls="navbarText"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarText">
-          <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">
-                Home
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                Features
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                Pricing
-              </a>
-            </li>
-          </ul>
-          {/* <span className="navbar-text">Navbar text with an inline element</span>  */}
-        </div>
-      </div>
+    <nav className="navbar bg-black navbar-expand-lg py-3 justify-content-center">
+      <ul class="nav nav-pills" id="pills-tab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button
+            class={`nav-link ${
+              currentRoute === "/" ? "active" : ""
+            } text-secondary px-4 mx-3`}
+            id="pills-home-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#pills-home"
+            type="button"
+            role="tab"
+            aria-controls="pills-home"
+            aria-selected="true"
+          >
+            <a href="/">Home</a>
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class={`nav-link ${
+              currentRoute === "/about" ? "active" : ""
+            } text-secondary px-4 mx-3`}
+            id="pills-home-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#pills-home"
+            type="button"
+            role="tab"
+            aria-controls="pills-home"
+            aria-selected="true"
+          >
+            <a href="/about">About Me</a>
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class={`nav-link ${
+              currentRoute === "/projects" ? "active" : ""
+            } text-secondary px-4 mx-3`}
+            id="pills-home-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#pills-home"
+            type="button"
+            role="tab"
+            aria-controls="pills-home"
+            aria-selected="true"
+          >
+            <a href="/">Projects</a>
+          </button>
+        </li>
+      </ul>
     </nav>
   );
 }

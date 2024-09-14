@@ -17,10 +17,10 @@ export default function Skills() {
   const frameworks = [
     ["Rails", 10],
     ["Hotwire", 9],
+    ["Bootstrap", 8],
     ["React.js", 7],
     ["Express.js", 7],
     ["Ember.js", 6],
-    ["Flaskh", 5],
   ];
 
   const [animationComplete, setAnimationComplete] = useState(false);
@@ -35,7 +35,7 @@ export default function Skills() {
   }, []);
 
   return (
-    <div className={styles.skills_container}>
+    <div className=''>
       <div className={styles.skills_section}>
         <h2 className={styles.title}>skills</h2>
         <div className={styles.skills_grid}>
