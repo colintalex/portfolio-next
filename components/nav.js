@@ -15,10 +15,10 @@ export default function Nav() {
 
   return (
     <nav className="navbar bg-black navbar-expand-lg py-3 justify-content-center">
-      <ul class="nav nav-pills" id="pills-tab" role="tablist">
-        <li class="nav-item" role="presentation">
+      <ul className="nav nav-pills" id="pills-tab" role="tablist">
+        <li className="nav-item" role="presentation">
           <button
-            class={`nav-link ${
+            className={`nav-link ${
               currentRoute === "/" ? "active" : ""
             } text-secondary px-4 mx-3`}
             id="pills-home-tab"
@@ -32,9 +32,9 @@ export default function Nav() {
             <a href="/">Home</a>
           </button>
         </li>
-        <li class="nav-item" role="presentation">
+        <li className="nav-item" role="presentation">
           <button
-            class={`nav-link ${
+            className={`nav-link ${
               currentRoute === "/about" ? "active" : ""
             } text-secondary px-4 mx-3`}
             id="pills-home-tab"
@@ -48,9 +48,9 @@ export default function Nav() {
             <a href="/about">About Me</a>
           </button>
         </li>
-        <li class="nav-item" role="presentation">
+        <li className="nav-item" role="presentation">
           <button
-            class={`nav-link ${
+            className={`nav-link ${
               currentRoute === "/projects" ? "active" : ""
             } text-secondary px-4 mx-3`}
             id="pills-home-tab"

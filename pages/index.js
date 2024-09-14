@@ -49,7 +49,7 @@ export default function Home() {
               </div>
               <div className=" text-secondary border-border-secondary col">
                 <hr className="mt-1 mb-3 w-75 mx-auto"></hr>
-                <p class="px-2 px-md-3">
+                <p className="px-2 px-md-3">
                   I am a lifelong learner/builder, and I love clean, clever and
                   simple.
                   <br></br>
@@ -69,7 +69,7 @@ export default function Home() {
               <div className="col-auto">
                 <svg
                   id={styles.logo}
-                  class="d-block w-100"
+                  className="d-block w-100"
                   width="806"
                   height="631"
                   viewBox="150 180 550 400"

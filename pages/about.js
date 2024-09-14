@@ -52,24 +52,24 @@ export default function About() {
         <div className="text-light p-2 p-md-3 rounded h-100 border border-dark">
           <div id="carouselExample" className="carousel slide h-100">
             <div className="carousel-inner h-100">
-              <div class="carousel-item active h-100">
-                <div class="h-100">
-                  <div class="card-header">
-                    <p class="fs-5 mb-0">Projects</p>
+              <div className="carousel-item active h-100">
+                <div className="h-100">
+                  <div className="card-header">
+                    <p className="fs-5 mb-0">Projects</p>
                   </div>
-                  <div class="card-body">
+                  <div className="card-body">
 
                   </div>
                 </div>
               </div>
               <div className="carousel-item h-100 position-relative">
-                <div class="bg-transparent h-100">
+                <div className="bg-transparent h-100">
                   <img
                     src="apaz_1.png"
                     className="d-block w-100 card-img-top rounded-top"
                     alt="..."
                   />
-                  <div class="card-body small rounded-bottom px-2 py-1 bg-dark text-light">
+                  <div className="card-body small rounded-bottom px-2 py-1 bg-dark text-light">
                     <p>Alpha Project Training Arizona</p>
                     <ul>
                       <li>Gym booking site intendend for young athletes.</li>
@@ -83,13 +83,13 @@ export default function About() {
                 </div>
               </div>
               <div className="carousel-item h-100 position-relative">
-                <div class="bg-transparent h-100">
+                <div className="bg-transparent h-100">
                   <img
                     src="apaz_1.png"
                     className="d-block w-100 card-img-top rounded-top"
                     alt="..."
                   />
-                  <div class="card-body small rounded-bottom px-2 py-1 bg-dark text-light">
+                  <div className="card-body small rounded-bottom px-2 py-1 bg-dark text-light">
                     <p>Alpha Project Training Arizona</p>
                     <ul>
                       <li>Gym booking site intendend for young athletes.</li>
@@ -104,28 +104,28 @@ export default function About() {
               </div>
             </div>
             <button
-              class="carousel-control-prev"
+              className="carousel-control-prev"
               type="button"
               data-bs-target="#carouselExample"
               data-bs-slide="prev"
             >
               <span
-                class="carousel-control-prev-icon"
+                className="carousel-control-prev-icon"
                 aria-hidden="true"
               ></span>
-              <span class="visually-hidden">Previous</span>
+              <span className="visually-hidden">Previous</span>
             </button>
             <button
-              class="carousel-control-next"
+              className="carousel-control-next"
               type="button"
               data-bs-target="#carouselExample"
               data-bs-slide="next"
             >
               <span
-                class="carousel-control-next-icon"
+                className="carousel-control-next-icon"
                 aria-hidden="true"
               ></span>
-              <span class="visually-hidden">Next</span>
+              <span className="visually-hidden">Next</span>
             </button>
           </div>
         </div>
