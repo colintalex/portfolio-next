@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Skills from "../components/skills";
 import Experience from "../components/experience";
 import Projects from "../components/projects";
+import Link from "next/link";
 
 export default function Home() {
   const [hasVisited, setHasVisited] = useState(false);
@@ -39,13 +40,36 @@ export default function Home() {
           </div>
           <div className="col-12 col-md-6 mb-3 md-md-0 order-1 order-md-1">
             <div className="bg-info bg-opacity-10 text-light p-3 text-center rounded h-100">
-              <div className="border-border-secondary">
+              <div className="">
                 <p className="display-3 border-bottom border-secondary pb-3 pb-md-2 w-auto mx-auto fw-medium opacity-75">
                   Colin Alexander
                 </p>
-                <p className="display-6 text-secondary">
+                <p className="display-6 text-secondary text-nowrap">
                   fullstack software engineer
                 </p>
+              </div>
+              <div className="d-flex justify-content-center border-top border-secondary opacity-75 pt-2">
+                <Link
+                  href="https://www.linkedin.com/in/colintalex/"
+                  target="_blank"
+                  passHref
+                  legacyBehavior
+                >
+                  <a target="_blank" className="text-decoration-none me-3">
+                    <i className="bi bi-linkedin"></i>
+                  </a>
+                </Link>
+
+                <Link
+                  href="https://github.com/colintalex"
+                  target="_blank"
+                  passHref
+                  legacyBehavior
+                >
+                  <a target="_blank" className="text-decoration-none">
+                    <i className="bi bi-github"></i>
+                  </a>
+                </Link>
               </div>
               <div className="text-light opacity-75 border-border-secondary col">
                 <hr className="mt-1 mb-3 w-75 mx-auto"></hr>

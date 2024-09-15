@@ -48,7 +48,7 @@ export default function Projects() {
               <div className="position-relative">
                 <div className="position-absolute top-0 start-0 translate-center opacity-50 d-flex ps-2">
                   <p className="mb-0 fs-3 px-3 border-bottom">
-                    projects <i className="bi bi-arrow-right-short"></i>
+                    my work <i className="bi bi-arrow-right-short"></i>
                   </p>
                 </div>
                 <svg
