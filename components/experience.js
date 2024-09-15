@@ -8,10 +8,12 @@ export default function Experience() {
       position: "Fullstack Engineer",
       startDate: "Sept 2023",
       endDate: "Present",
+      skills: ["Rails", "GCP", "Docker", "Node.js", "Hotwire"],
       descriptions: [
-        "Products Team, works with Principal Architect to manage and maintain a Rails-based application suite, GIS-server deployments, and automated data pipelines.",
-        "Team-developed a geospatial, public web-app in 5 weeks, providing a platform for spatial funding-analysis while bolstering over 1Tb of user downloads to date.",
-        "Self-authored a role-based documentation platform on Rails, streamlining internal viewing/editing of client-facing documentation for 4 applications within the company suite.",
+        "Direct ownership of over a half-dozen Rails apps designed for client-facing and/or internal use.",
+        "Provide specialized support for legacy Rails apps and specific, related Node applications.",
+        "Collaborate with PM's and Cloud Manager to discuss best-approach strategies for long-term strategies on upcoming projects.",
+        "Maintain consistent and branded behaviors and design patterns across product-suite.",
       ],
     },
     {
@@ -19,6 +21,7 @@ export default function Experience() {
       position: "Software Engineer II",
       startDate: "Sept 2022",
       endDate: "Sept 2023",
+      skills: ["Rails", "LinuxOS", "jQuery", "Postgres"],
       descriptions: [
         "Products Team, works with Principal Architect to manage and maintain a Rails-based application suite, GIS-server deployments, and automated data pipelines.",
         "Team-developed a geospatial, public web-app in 5 weeks, providing a platform for spatial funding-analysis while bolstering over 1Tb of user downloads to date.",
@@ -30,6 +33,7 @@ export default function Experience() {
       position: "Software Engineer I",
       startDate: "June 2021",
       endDate: "Sept 2022",
+      skills: ["Rails", "jQuery", "Postgres", "Python"],
       descriptions: [
         "Assisted Lead Engineer with development/on-site deployment of  company software product suite, built using Rails.",
         "Regained control on technical debt by assisting with debugging deep-dives & developing strategies for new technology.",
@@ -48,7 +52,9 @@ export default function Experience() {
           {workHistory.map((job, index) => (
             <div
               key={index}
-              className={`carousel-item experience h-100 ${index === 0 ? "active" : ""}`}
+              className={`carousel-item experience h-100 ${
+                index === 0 ? "active" : ""
+              }`}
             >
               <div className="p-2 h-100">
                 <div className="d-flex justify-content-between">
@@ -61,14 +67,17 @@ export default function Experience() {
                     >
                       {job.company} <i className="bi bi-link-45deg"></i>
                     </Link>
-                    <p className="opacity-50 mb-1 mb-md-3 text-nowrap">
-                      {job.startDate} - {job.endDate}
-                    </p>
+                    {job.skills.map((skill, i) => (
+                      <span key={i} className="badge bg-light text-dark bg-opacity-50 m-1">{skill}</span>
+                    ))}
                   </div>
                   <div className="text-end opacity-75 d-none d-md-block">
                     <Link className="mb-1" href="https://sanborn.com/" passHref>
                       {job.company} <i className="bi bi-link-45deg"></i>
                     </Link>
+                    <p className="opacity-50 mb-1 mb-md-3 text-nowrap">
+                      {job.startDate} - {job.endDate}
+                    </p>
                   </div>
                 </div>
                 <hr className="w-50 mx-auto mt-1"></hr>

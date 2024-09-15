@@ -10,7 +10,7 @@ export default function Skills() {
     ["Docker", 8],
     ["GCP", 8],
     ["DevOps", 8],
-    ["MongoDB", 6],
+    ["Node.js", 6],
     ["Python", 6],
   ];
 
