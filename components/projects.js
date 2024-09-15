@@ -48,7 +48,7 @@ export default function Projects() {
               <div className="position-relative">
                 <div className="position-absolute top-0 start-0 translate-center opacity-50 d-flex ps-2">
                   <p className="mb-0 fs-3 px-3 border-bottom">
-                    projects <i class="bi bi-arrow-right-short"></i>
+                    projects <i className="bi bi-arrow-right-short"></i>
                   </p>
                 </div>
                 <svg
@@ -134,35 +134,35 @@ export default function Projects() {
                 target="_blank"
                 href="https://www.apaztraining.com"
               >
-                Go To Site <i class="bi bi-arrow-right-circle"></i>
+                Go To Site <i className="bi bi-arrow-right-circle"></i>
               </Link>
             </div>
           </div>
         </div>
         <div className="">
           <button
-            class="carousel-control-prev pb-3"
+            className="carousel-control-prev pb-3"
             type="button"
             data-bs-target="#projectsCarousel"
             data-bs-slide="prev"
           >
             <span
-              class="carousel-control-prev-icon opacity-75"
+              className="carousel-control-prev-icon opacity-75"
               aria-hidden="true"
             ></span>
-            <span class="visually-hidden">Previous</span>
+            <span className="visually-hidden">Previous</span>
           </button>
           <button
-            class="carousel-control-next pb-3"
+            className="carousel-control-next pb-3"
             type="button"
             data-bs-target="#projectsCarousel"
             data-bs-slide="next"
           >
             <span
-              class="carousel-control-next-icon opacity-75"
+              className="carousel-control-next-icon opacity-75"
               aria-hidden="true"
             ></span>
-            <span class="visually-hidden">Next</span>
+            <span className="visually-hidden">Next</span>
           </button>
         </div>
       </div>
