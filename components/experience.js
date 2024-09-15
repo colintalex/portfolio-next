@@ -55,18 +55,19 @@ export default function Experience() {
                   <div className="pb-2 pb-md-3">
                     <p className="fs-4 mb-0">{job.position}</p>
                     <Link
-                      class="d-md-none opacity-75"
+                      className="d-md-none opacity-75"
                       href="https://sanborn.com/"
+                      passHref
                     >
-                      {job.company} <i class="bi bi-link-45deg"></i>
+                      {job.company} <i className="bi bi-link-45deg"></i>
                     </Link>
                     <p className="opacity-50 mb-1 mb-md-3 text-nowrap">
                       {job.startDate} - {job.endDate}
                     </p>
                   </div>
                   <div className="text-end opacity-75 d-none d-md-block">
-                    <Link class="mb-1" href="https://sanborn.com/">
-                      {job.company} <i class="bi bi-link-45deg"></i>
+                    <Link className="mb-1" href="https://sanborn.com/" passHref>
+                      {job.company} <i className="bi bi-link-45deg"></i>
                     </Link>
                   </div>
                 </div>
@@ -108,28 +109,28 @@ export default function Experience() {
         </div>
         <div className="">
           <button
-            class="carousel-control-prev pb-3"
+            className="carousel-control-prev pb-3"
             type="button"
             data-bs-target="#carouselExampleIndicators"
             data-bs-slide="prev"
           >
             <span
-              class="carousel-control-prev-icon opacity-75 experience"
+              className="carousel-control-prev-icon opacity-75 experience"
               aria-hidden="true"
             ></span>
-            <span class="visually-hidden">Previous</span>
+            <span className="visually-hidden">Previous</span>
           </button>
           <button
-            class="carousel-control-next pb-3"
+            className="carousel-control-next pb-3"
             type="button"
             data-bs-target="#carouselExampleIndicators"
             data-bs-slide="next"
           >
             <span
-              class="carousel-control-next-icon opacity-75 experience"
+              className="carousel-control-next-icon opacity-75 experience"
               aria-hidden="true"
             ></span>
-            <span class="visually-hidden">Next</span>
+            <span className="visually-hidden">Next</span>
           </button>
         </div>
       </div>
