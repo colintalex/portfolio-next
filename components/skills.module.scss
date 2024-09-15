@@ -36,11 +36,17 @@
   transform: translateY(0);
 }
 
+@media only screen and (max-width: 600px) {
+  .skill_label {
+    font-size: 13px;
+  }
+}
 .skill_label {
   font-weight: bold;
   margin-bottom: 5px;
   color: rgba(245, 245, 245, 0.678);
 }
+
 
 .progress_container {
   width: 100%;

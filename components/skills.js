@@ -8,8 +8,8 @@ export default function Skills() {
     ["JavaScript", 9],
     ["Linux OS", 8],
     ["Docker", 8],
-    ["G", 8],
-    ["GoogleCloud", 7],
+    ["GCP", 8],
+    ["DevOps", 8],
     ["MongoDB", 6],
     ["Python", 6],
   ];

@@ -43,12 +43,17 @@ export default function Projects() {
     <>
       <div id="projectsCarousel" className="carousel slide h-100">
         <div className="carousel-inner h-100">
-          <div key="-1" className="carousel-item h-100 active">
+          <div key="-1" className="carousel-item projects h-100 active">
             <div className="p-2 ">
-              <div className="d-flex justify-content-between">
+              <div className="position-relative">
+                <div className="position-absolute top-0 start-0 translate-center opacity-50 d-flex ps-2">
+                  <p className="mb-0 fs-3 px-3 border-bottom">
+                    projects <i class="bi bi-arrow-right-short"></i>
+                  </p>
+                </div>
                 <svg
                   id={styles.logo}
-                  className="d-block "
+                  className="d-block top-50"
                   viewBox="150 180 550 400"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -112,62 +117,54 @@ export default function Projects() {
             </div>
           </div>
 
-          {/* <div key="0" className="carousel-item h-100">
-            <div className="p-2 position-relative h-75">
-              <div className="position-absolute top-50 start-50 translate-middle  bg-black border p-3 rounded bg-opacity-90 z-3">
-                <h5>AlphaProject Training Gym</h5>
-                <hr className="my-1"></hr>
-                <span className="opacity-50">
-                  Booking Platform + Sales Funnel
-                </span>
-                <hr className="my-1"></hr>
-                <span className="opacity-50">
-                  Rails + Hotwire + Stripe + DocuSeal
-                </span>
-                <br></br>
-                <Link
-                  className="btn btn-outline-info btn-sm mt-2"
-                  target="_blank"
-                  href="https://www.apaztraining.com"
-                >
-                  Go To Site
-                </Link>
-              </div>
-              <Image
-                src="/apaz_1.png"
-                layout="fill"
-                objectFit="contain"
-                alt="Description of the image"
-              />
+          <div key="0" className="carousel-item projects h-100" id="apaz">
+            <div className="position-absolute bottom-0 start-0 mb-3 ms-3  bg-black border p-3 rounded bg-opacity-90 z-1">
+              <h5>AlphaProject Training Gym</h5>
+              <hr className="my-1"></hr>
+              <span className="opacity-50">
+                Booking Platform + Sales Funnel
+              </span>
+              <hr className="my-1"></hr>
+              <span className="opacity-50 fs-6">
+                Rails + Hotwire w/ Stripe & DocuSeal
+              </span>
+              <br></br>
+              <Link
+                className="btn btn-outline-info btn-sm mt-2"
+                target="_blank"
+                href="https://www.apaztraining.com"
+              >
+                Go To Site <i class="bi bi-arrow-right-circle"></i>
+              </Link>
             </div>
-          </div> */}
+          </div>
         </div>
-        {/* <div className="">
+        <div className="">
           <button
-            className="carousel-control-prev pb-3"
+            class="carousel-control-prev pb-3"
             type="button"
             data-bs-target="#projectsCarousel"
             data-bs-slide="prev"
           >
             <span
-              className="carousel-control-prev-icon opacity-75"
+              class="carousel-control-prev-icon opacity-75"
               aria-hidden="true"
             ></span>
-            <span className="visually-hidden">Previous</span>
+            <span class="visually-hidden">Previous</span>
           </button>
           <button
-            className="carousel-control-next pb-3"
+            class="carousel-control-next pb-3"
             type="button"
             data-bs-target="#projectsCarousel"
             data-bs-slide="next"
           >
             <span
-              className="carousel-control-next-icon opacity-75"
+              class="carousel-control-next-icon opacity-75"
               aria-hidden="true"
             ></span>
-            <span className="visually-hidden">Next</span>
+            <span class="visually-hidden">Next</span>
           </button>
-        </div> */}
+        </div>
       </div>
     </>
   );

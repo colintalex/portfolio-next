@@ -117,3 +117,26 @@ a {
   opacity: 0.8;
   color: gold;
 }
+
+
+// SCSS for phone screens
+@media only screen and (max-width: 600px) {
+  .carousel-item.experience {
+    min-height: 550px;
+  }
+  .carousel-item.projects {
+    min-height: 380px;
+  }
+}
+
+#apaz {
+  background-image: url('/apaz_1.png');
+  background-size: cover;
+  /* or cover, depending on your needs */
+  background-repeat: no-repeat;
+  background-position: center;
+  height: -webkit-fill-available;
+  /* Adjust height as needed */
+  width: 100%;
+  /* Adjust width as needed */
+}

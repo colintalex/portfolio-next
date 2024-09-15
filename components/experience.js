@@ -41,14 +41,14 @@ export default function Experience() {
   return (
     <>
       <div className="border-bottom opacity-50">
-        <p className="mb-0 fs-3">experience</p>
+        <p className="mb-0 fs-3 ps-2">experience</p>
       </div>
       <div id="carouselExampleIndicators" className="carousel slide h-100">
         <div className="carousel-inner h-100">
           {workHistory.map((job, index) => (
             <div
               key={index}
-              className={`carousel-item h-100 ${index === 0 ? "active" : ""}`}
+              className={`carousel-item experience h-100 ${index === 0 ? "active" : ""}`}
             >
               <div className="p-2 h-100">
                 <div className="d-flex justify-content-between">

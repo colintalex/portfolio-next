@@ -69,9 +69,6 @@ export default function Home() {
           </div>
           <div className="col-12 col-md-6 mb-3 md-md-0 order-2 order-md-2">
             <div className="bg-info bg-opacity-10 text-light p-3 text-center rounded h-100">
-              {/* <div className="border-bottom opacity-50 d-flex ps-2">
-                <p className="mb-0 fs-3">projects</p>
-              </div> */}
               <Projects />
             </div>
           </div>
