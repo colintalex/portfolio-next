@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styles from "./work_history.module.scss";
 
 export default function Experience() {
@@ -39,11 +40,51 @@ export default function Experience() {
 
   return (
     <>
-      <div className='border-bottom opacity-50'>
-        <p className='mb-0 fs-3'>work experience</p>
+      <div className="border-bottom opacity-50">
+        <p className="mb-0 fs-3">experience</p>
       </div>
       <div id="carouselExampleIndicators" className="carousel slide h-100">
-        <div className="carousel-indicators">
+        <div className="carousel-inner h-100">
+          {workHistory.map((job, index) => (
+            <div
+              key={index}
+              className={`carousel-item h-100 ${index === 0 ? "active" : ""}`}
+            >
+              <div className="p-2 h-100">
+                <div className="d-flex justify-content-between">
+                  <div className="pb-2 pb-md-3">
+                    <p className="fs-4 mb-0">{job.position}</p>
+                    <Link
+                      class="d-md-none opacity-75"
+                      href="https://sanborn.com/"
+                    >
+                      {job.company} <i class="bi bi-link-45deg"></i>
+                    </Link>
+                    <p className="opacity-50 mb-1 mb-md-3 text-nowrap">
+                      {job.startDate} - {job.endDate}
+                    </p>
+                  </div>
+                  <div className="text-end opacity-75 d-none d-md-block">
+                    <Link class="mb-1" href="https://sanborn.com/">
+                      {job.company} <i class="bi bi-link-45deg"></i>
+                    </Link>
+                  </div>
+                </div>
+                <hr className="w-50 mx-auto mt-1"></hr>
+                <div className="overflow-hidden">
+                  <ul className={styles.descriptionList}>
+                    {job.descriptions.map((description, i) => (
+                      <li key={i} className={styles.descriptionItem}>
+                        {description}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+        <div className="carousel-indicators experience">
           <button
             type="button"
             data-bs-target="#carouselExampleIndicators"
@@ -65,52 +106,32 @@ export default function Experience() {
             aria-label="Slide 3"
           ></button>
         </div>
-        <div className="carousel-inner h-100">
-          {workHistory.map((job, index) => (
-            <div
-              key={index}
-              className={`carousel-item h-100 ${index === 0 ? "active" : ""}`}
-            >
-              <div className="p-2">
-                <div className="d-flex justify-content-between">
-                  <h3 className="">{job.company}</h3>
-                  <div className="text-end">
-                    <p className="mb-1">{job.position}</p>
-                    <p className="">
-                      {job.startDate} - {job.endDate}
-                    </p>
-                  </div>
-                </div>
-                <hr className="w-50 mx-auto mt-1"></hr>
-                <ul className={styles.descriptionList}>
-                  {job.descriptions.map((description, i) => (
-                    <li key={i} className={styles.descriptionItem}>
-                      {description}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          ))}
+        <div className="">
+          <button
+            class="carousel-control-prev pb-3"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev"
+          >
+            <span
+              class="carousel-control-prev-icon opacity-75 experience"
+              aria-hidden="true"
+            ></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next pb-3"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next"
+          >
+            <span
+              class="carousel-control-next-icon opacity-75 experience"
+              aria-hidden="true"
+            ></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
-        <button
-          className="carousel-control-prev"
-          type="button"
-          data-bs-target="#carouselExampleIndicators"
-          data-bs-slide="prev"
-        >
-          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span className="visually-hidden">Previous</span>
-        </button>
-        <button
-          className="carousel-control-next"
-          type="button"
-          data-bs-target="#carouselExampleIndicators"
-          data-bs-slide="next"
-        >
-          <span className="carousel-control-next-icon" aria-hidden="true"></span>
-          <span className="visually-hidden">Next</span>
-        </button>
       </div>
     </>
   );

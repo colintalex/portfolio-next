@@ -35,7 +35,7 @@ export default function Skills() {
   }, []);
 
   return (
-    <div className=''>
+    <div className='h-100'>
       <div className={styles.skills_section}>
         <h2 className={styles.title}>skills</h2>
         <div className={styles.skills_grid}>

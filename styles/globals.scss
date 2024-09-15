@@ -38,6 +38,26 @@ a {
 }
 
 
+/* Timeline indicators with dates */
+.carousel-indicators.experience {
+
+  button {
+    &.active {
+      // background-color: rgb(202, 2, 202);
+      background-color: rgb(0, 191, 191);
+    }
+
+    &:hover {
+      color: #0d6efd;
+    }
+  }
+}
+.carousel-control-prev.experience,
+.carousel-control-next.experience {
+  top: auto !important;
+}
+
+
 /* #ruby {
   background-color: red !important;
 }
