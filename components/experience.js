@@ -67,6 +67,7 @@ export default function Experience() {
                     >
                       {job.company} <i className="bi bi-link-45deg"></i>
                     </Link>
+                    <br className="d-md-none"></br>
                     {job.skills.map((skill, i) => (
                       <span key={i} className="badge bg-light text-dark bg-opacity-50 m-1">{skill}</span>
                     ))}
