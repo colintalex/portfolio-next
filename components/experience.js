@@ -10,10 +10,10 @@ export default function Experience() {
       endDate: "Present",
       skills: ["Rails", "GCP", "Docker", "Node.js", "Hotwire"],
       descriptions: [
-        "Direct ownership of over a half-dozen Rails apps designed for client-facing and/or internal use.",
-        "Provide specialized support for legacy Rails apps and specific, related Node applications.",
-        "Collaborate with PM's and Cloud Manager to discuss best-approach strategies for long-term strategies on upcoming projects.",
-        "Maintain consistent and branded behaviors and design patterns across product-suite.",
+        "Lead development and maintenance of multiple client-facing and internal Rails applications, enhancing functionality/ UX via new features and refactors.",
+        "Deliver specialized support for legacy Rails and Node.js applications, ensuring stability and introducing modern enhancements in flagship products.",
+        "Partner with Product Managers and Cloud Manager to devise and implement strategic solutions for complex projects, optimizing long-term success.",
+        "Ensure consistent application of branding and design patterns across the product suite, strengthening the user interface and experience.",
       ],
     },
     {
@@ -23,9 +23,10 @@ export default function Experience() {
       endDate: "Sept 2023",
       skills: ["Rails", "LinuxOS", "jQuery", "Postgres"],
       descriptions: [
-        "Products Team, works with Principal Architect to manage and maintain a Rails-based application suite, GIS-server deployments, and automated data pipelines.",
-        "Team-developed a geospatial, public web-app in 5 weeks, providing a platform for spatial funding-analysis while bolstering over 1Tb of user downloads to date.",
-        "Self-authored a role-based documentation platform on Rails, streamlining internal viewing/editing of client-facing documentation for 4 applications within the company suite.",
+        "Managed and optimized a comprehensive Rails-based application suite, including GIS-server deployments and automated data pipelines, in collaboration with the Principal Architect.",
+        "Developed a high-impact geospatial web application in just 5 weeks, facilitating spatial funding analysis and achieving over 1TB in user downloads.",
+        "Designed and implemented a role-based documentation platform on Rails, streamlining access and management of client-facing documentation for many key applications.",
+        "Developed on-server Python and Ruby scripts for automated reporting to clients across various server implementations."
       ],
     },
     {
@@ -35,12 +36,13 @@ export default function Experience() {
       endDate: "Sept 2022",
       skills: ["Rails", "jQuery", "Postgres", "Python"],
       descriptions: [
-        "Assisted Lead Engineer with development/on-site deployment of  company software product suite, built using Rails.",
-        "Regained control on technical debt by assisting with debugging deep-dives & developing strategies for new technology.",
-        "Developed a plane tracking map interface by using aerial tracking API's for observing/recording/replaying of flight paths.",
+        "Supported the Lead Engineer in the development and deployment of a comprehensive software suite, leveraging Rails for robust application development.",
+        "Addressed and mitigated technical debt through in-depth debugging and strategic planning for technology upgrades and enhancements.",
+        "Engineered a dynamic plane tracking map interface using aerial tracking APIs, enabling real-time observation, recording, and replay of flight paths.",
       ],
     },
   ];
+
 
   return (
     <>
